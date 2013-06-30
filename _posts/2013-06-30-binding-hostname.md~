@@ -1,0 +1,8 @@
+---
+layout: post
+title: "binding hostname"
+description: ""
+category: 
+tags: []
+---
+{% include JB/setup %}
