@@ -4,7 +4,7 @@
  <title>斜风细雨不须归</title>
  <link href="http://zhangzheyuk.github.com/" rel="self"/>
  <link href="http://zhangzheyuk.github.com"/>
- <updated>2013-08-15T10:59:37+08:00</updated>
+ <updated>2013-08-15T13:42:48+08:00</updated>
  <id>http://zhangzheyuk.github.com</id>
  <author>
    <name>zhangzheyuk</name>
@@ -51,9 +51,9 @@ try to get fetch the webpage
 
 &lt;div class='org-src-container'&gt;
 
-&lt;pre class='src src-python'&gt;&lt;span class='linenr'&gt;1: &lt;/span&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2 
-&lt;span class='linenr'&gt;2: &lt;/span&gt;&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(&lt;span style='color: #ffa07a;'&gt;'http://python.org/'&lt;/span&gt;)
-&lt;span class='linenr'&gt;3: &lt;/span&gt;&lt;span style='color: #eedd82;'&gt;html&lt;/span&gt; = reponse.read()
+&lt;pre class='src src-python'&gt;&lt;span class='linenr'&gt;1: &lt;/span&gt;&lt;span style='color: #fa8072;'&gt;import&lt;/span&gt; urllib2 
+&lt;span class='linenr'&gt;2: &lt;/span&gt;&lt;span style='color: #7fffd4; font-weight: bold;'&gt;response&lt;/span&gt; = urllib2.urlopen(&lt;span style='color: #ffa07a;'&gt;'http://python.org/'&lt;/span&gt;)
+&lt;span class='linenr'&gt;3: &lt;/span&gt;&lt;span style='color: #7fffd4; font-weight: bold;'&gt;html&lt;/span&gt; = reponse.read()
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -63,11 +63,11 @@ try to get fetch the webpage
 &lt;div class='outline-text-2' id='text-3'&gt;
 &lt;div class='org-src-container'&gt;
 
-&lt;pre class='src src-python'&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2
+&lt;pre class='src src-python'&gt;&lt;span style='color: #fa8072;'&gt;import&lt;/span&gt; urllib2
 
-&lt;span style='color: #eedd82;'&gt;req&lt;/span&gt; =  urllib2.Request(&lt;span style='color: #ffa07a;'&gt;'http://www.voidspace.org.uk'&lt;/span&gt;)
-&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
-&lt;span style='color: #eedd82;'&gt;the_page&lt;/span&gt; = response.read()
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;req&lt;/span&gt; =  urllib2.Request(&lt;span style='color: #ffa07a;'&gt;'http://www.voidspace.org.uk'&lt;/span&gt;)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;the_page&lt;/span&gt; = response.read()
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -81,18 +81,18 @@ try to get fetch the webpage
 
 &lt;div class='org-src-container'&gt;
 
-&lt;pre class='src src-python'&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib
-&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2
+&lt;pre class='src src-python'&gt;&lt;span style='color: #fa8072;'&gt;import&lt;/span&gt; urllib
+&lt;span style='color: #fa8072;'&gt;import&lt;/span&gt; urllib2
 
-&lt;span style='color: #eedd82;'&gt;url&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'http://www/someserver.com/cgi-bin/register.cgi'&lt;/span&gt;
-&lt;span style='color: #eedd82;'&gt;value&lt;/span&gt; = {&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Led Chang'&lt;/span&gt;
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;url&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'http://www/someserver.com/cgi-bin/register.cgi'&lt;/span&gt;
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;value&lt;/span&gt; = {&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Led Chang'&lt;/span&gt;
 &lt;span style='color: #ffa07a;'&gt;'location'&lt;/span&gt;: &lt;span style='color: #ffa07a;'&gt;'QD'&lt;/span&gt;
 &lt;span style='color: #ffa07a;'&gt;'language'&lt;/span&gt;: &lt;span style='color: #ffa07a;'&gt;'Python'&lt;/span&gt;}
 
-&lt;span style='color: #eedd82;'&gt;data&lt;/span&gt; = urllib.urlencode(values)
-&lt;span style='color: #eedd82;'&gt;req&lt;/span&gt; = urllib2.Request(url, data)
-&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
-&lt;span style='color: #eedd82;'&gt;the_page&lt;/span&gt; = response.read()
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;data&lt;/span&gt; = urllib.urlencode(values)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;req&lt;/span&gt; = urllib2.Request(url, data)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;the_page&lt;/span&gt; = response.read()
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -129,14 +129,14 @@ Post是允许传输大量数据的方法，而Get方法会将所要传输的数�
 
 &lt;div class='org-src-container'&gt;
 
-&lt;pre class='src src-python'&gt;&amp;gt;&amp;gt;&amp;gt; &lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib
+&lt;pre class='src src-python'&gt;&amp;gt;&amp;gt;&amp;gt; &lt;span style='color: #fa8072;'&gt;import&lt;/span&gt; urllib
 &amp;gt;&amp;gt;&amp;gt; data={}
 &amp;gt;&amp;gt;&amp;gt; data[&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt;] = &lt;span style='color: #ffa07a;'&gt;'Somebody Here'&lt;/span&gt;
 &amp;gt;&amp;gt;&amp;gt; data[&lt;span style='color: #ffa07a;'&gt;'location'&lt;/span&gt;] = &lt;span style='color: #ffa07a;'&gt;'Northampton'&lt;/span&gt;
 &amp;gt;&amp;gt;&amp;gt; data[&lt;span style='color: #ffa07a;'&gt;'language'&lt;/span&gt;] = &lt;span style='color: #ffa07a;'&gt;'Python'&lt;/span&gt;
 &amp;gt;&amp;gt;&amp;gt; url_values = urllib.urlencode(data)
-&amp;gt;&amp;gt;&amp;gt; &lt;span style='color: #00ffff;'&gt;print&lt;/span&gt; url_values
-&lt;span style='color: #eedd82;'&gt;name&lt;/span&gt;=Somebody+Here&amp;amp;language=Python&amp;amp;location=Northampton
+&amp;gt;&amp;gt;&amp;gt; &lt;span style='color: #fa8072;'&gt;print&lt;/span&gt; url_values
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;name&lt;/span&gt;=Somebody+Here&amp;amp;language=Python&amp;amp;location=Northampton
 &amp;gt;&amp;gt;&amp;gt; url = &lt;span style='color: #ffa07a;'&gt;'http://www.example.com/example.cgi'&lt;/span&gt;
 &amp;gt;&amp;gt;&amp;gt; full_url = url + &lt;span style='color: #ffa07a;'&gt;'?'&lt;/span&gt; + url_values
 &amp;gt;&amp;gt;&amp;gt; data = urllib2.urlopen(full_url)
@@ -154,20 +154,20 @@ contains about the version of the OS and web browser
 
 &lt;div class='org-src-container'&gt;
 
-&lt;pre class='src src-python'&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib
-&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2
+&lt;pre class='src src-python'&gt;&lt;span style='color: #fa8072;'&gt;import&lt;/span&gt; urllib
+&lt;span style='color: #fa8072;'&gt;import&lt;/span&gt; urllib2
 
-&lt;span style='color: #eedd82;'&gt;url&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'http://www.someserver.com/cgi-bin/register.cgi'&lt;/span&gt;
-&lt;span style='color: #eedd82;'&gt;user_agent&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'&lt;/span&gt;
-&lt;span style='color: #eedd82;'&gt;values&lt;/span&gt; = {&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Michael Foord'&lt;/span&gt;,
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;url&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'http://www.someserver.com/cgi-bin/register.cgi'&lt;/span&gt;
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;user_agent&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'&lt;/span&gt;
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;values&lt;/span&gt; = {&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Michael Foord'&lt;/span&gt;,
 &lt;span style='color: #ffa07a;'&gt;'location'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Northampton'&lt;/span&gt;,
 &lt;span style='color: #ffa07a;'&gt;'language'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Python'&lt;/span&gt; }
-&lt;span style='color: #eedd82;'&gt;headers&lt;/span&gt; = { &lt;span style='color: #ffa07a;'&gt;'User-Agent'&lt;/span&gt; : user_agent }
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;headers&lt;/span&gt; = { &lt;span style='color: #ffa07a;'&gt;'User-Agent'&lt;/span&gt; : user_agent }
 
-&lt;span style='color: #eedd82;'&gt;data&lt;/span&gt; = urllib.urlencode(values)
-&lt;span style='color: #eedd82;'&gt;req&lt;/span&gt; = urllib2.Request(url, data, headers)
-&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
-&lt;span style='color: #eedd82;'&gt;the_page&lt;/span&gt; = response.read()
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;data&lt;/span&gt; = urllib.urlencode(values)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;req&lt;/span&gt; = urllib2.Request(url, data, headers)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
+&lt;span style='color: #7fffd4; font-weight: bold;'&gt;the_page&lt;/span&gt; = response.read()
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -178,7 +178,7 @@ contains about the version of the OS and web browser
 &lt;/div&gt;
 &lt;div class='status' id='postamble'&gt;
 &lt;p class='author'&gt;Author: zhang led&lt;/p&gt;
-&lt;p class='date'&gt;Created: 2013-08-14 Wed 14:44&lt;/p&gt;
+&lt;p class='date'&gt;Created: 2013-08-15 Thu 13:39&lt;/p&gt;
 &lt;p class='creator'&gt;&lt;a href='http://www.gnu.org/software/emacs/'&gt;Emacs&lt;/a&gt; 23.4.1 (&lt;a href='http://orgmode.org'&gt;Org&lt;/a&gt; mode 8.0.7)&lt;/p&gt;
 &lt;p class='xhtml-validation'&gt;&lt;a href='http://validator.w3.org/check?uri=referer'&gt;Validate XHTML 1.0&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;

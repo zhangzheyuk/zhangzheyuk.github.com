@@ -151,9 +151,9 @@ try to get fetch the webpage
 
 <div class='org-src-container'>
 
-<pre class='src src-python'><span class='linenr'>1: </span><span style='color: #00ffff;'>import</span> urllib2 
-<span class='linenr'>2: </span><span style='color: #eedd82;'>response</span> = urllib2.urlopen(<span style='color: #ffa07a;'>'http://python.org/'</span>)
-<span class='linenr'>3: </span><span style='color: #eedd82;'>html</span> = reponse.read()
+<pre class='src src-python'><span class='linenr'>1: </span><span style='color: #fa8072;'>import</span> urllib2 
+<span class='linenr'>2: </span><span style='color: #7fffd4; font-weight: bold;'>response</span> = urllib2.urlopen(<span style='color: #ffa07a;'>'http://python.org/'</span>)
+<span class='linenr'>3: </span><span style='color: #7fffd4; font-weight: bold;'>html</span> = reponse.read()
 </pre>
 </div>
 </div>
@@ -163,11 +163,11 @@ try to get fetch the webpage
 <div class='outline-text-2' id='text-3'>
 <div class='org-src-container'>
 
-<pre class='src src-python'><span style='color: #00ffff;'>import</span> urllib2
+<pre class='src src-python'><span style='color: #fa8072;'>import</span> urllib2
 
-<span style='color: #eedd82;'>req</span> =  urllib2.Request(<span style='color: #ffa07a;'>'http://www.voidspace.org.uk'</span>)
-<span style='color: #eedd82;'>response</span> = urllib2.urlopen(req)
-<span style='color: #eedd82;'>the_page</span> = response.read()
+<span style='color: #7fffd4; font-weight: bold;'>req</span> =  urllib2.Request(<span style='color: #ffa07a;'>'http://www.voidspace.org.uk'</span>)
+<span style='color: #7fffd4; font-weight: bold;'>response</span> = urllib2.urlopen(req)
+<span style='color: #7fffd4; font-weight: bold;'>the_page</span> = response.read()
 </pre>
 </div>
 </div>
@@ -181,18 +181,18 @@ try to get fetch the webpage
 
 <div class='org-src-container'>
 
-<pre class='src src-python'><span style='color: #00ffff;'>import</span> urllib
-<span style='color: #00ffff;'>import</span> urllib2
+<pre class='src src-python'><span style='color: #fa8072;'>import</span> urllib
+<span style='color: #fa8072;'>import</span> urllib2
 
-<span style='color: #eedd82;'>url</span> = <span style='color: #ffa07a;'>'http://www/someserver.com/cgi-bin/register.cgi'</span>
-<span style='color: #eedd82;'>value</span> = {<span style='color: #ffa07a;'>'name'</span> : <span style='color: #ffa07a;'>'Led Chang'</span>
+<span style='color: #7fffd4; font-weight: bold;'>url</span> = <span style='color: #ffa07a;'>'http://www/someserver.com/cgi-bin/register.cgi'</span>
+<span style='color: #7fffd4; font-weight: bold;'>value</span> = {<span style='color: #ffa07a;'>'name'</span> : <span style='color: #ffa07a;'>'Led Chang'</span>
 <span style='color: #ffa07a;'>'location'</span>: <span style='color: #ffa07a;'>'QD'</span>
 <span style='color: #ffa07a;'>'language'</span>: <span style='color: #ffa07a;'>'Python'</span>}
 
-<span style='color: #eedd82;'>data</span> = urllib.urlencode(values)
-<span style='color: #eedd82;'>req</span> = urllib2.Request(url, data)
-<span style='color: #eedd82;'>response</span> = urllib2.urlopen(req)
-<span style='color: #eedd82;'>the_page</span> = response.read()
+<span style='color: #7fffd4; font-weight: bold;'>data</span> = urllib.urlencode(values)
+<span style='color: #7fffd4; font-weight: bold;'>req</span> = urllib2.Request(url, data)
+<span style='color: #7fffd4; font-weight: bold;'>response</span> = urllib2.urlopen(req)
+<span style='color: #7fffd4; font-weight: bold;'>the_page</span> = response.read()
 </pre>
 </div>
 </div>
@@ -229,14 +229,14 @@ Post是允许传输大量数据的方法，而Get方法会将所要传输的数�
 
 <div class='org-src-container'>
 
-<pre class='src src-python'>&gt;&gt;&gt; <span style='color: #00ffff;'>import</span> urllib
+<pre class='src src-python'>&gt;&gt;&gt; <span style='color: #fa8072;'>import</span> urllib
 &gt;&gt;&gt; data={}
 &gt;&gt;&gt; data[<span style='color: #ffa07a;'>'name'</span>] = <span style='color: #ffa07a;'>'Somebody Here'</span>
 &gt;&gt;&gt; data[<span style='color: #ffa07a;'>'location'</span>] = <span style='color: #ffa07a;'>'Northampton'</span>
 &gt;&gt;&gt; data[<span style='color: #ffa07a;'>'language'</span>] = <span style='color: #ffa07a;'>'Python'</span>
 &gt;&gt;&gt; url_values = urllib.urlencode(data)
-&gt;&gt;&gt; <span style='color: #00ffff;'>print</span> url_values
-<span style='color: #eedd82;'>name</span>=Somebody+Here&amp;language=Python&amp;location=Northampton
+&gt;&gt;&gt; <span style='color: #fa8072;'>print</span> url_values
+<span style='color: #7fffd4; font-weight: bold;'>name</span>=Somebody+Here&amp;language=Python&amp;location=Northampton
 &gt;&gt;&gt; url = <span style='color: #ffa07a;'>'http://www.example.com/example.cgi'</span>
 &gt;&gt;&gt; full_url = url + <span style='color: #ffa07a;'>'?'</span> + url_values
 &gt;&gt;&gt; data = urllib2.urlopen(full_url)
@@ -254,20 +254,20 @@ contains about the version of the OS and web browser
 
 <div class='org-src-container'>
 
-<pre class='src src-python'><span style='color: #00ffff;'>import</span> urllib
-<span style='color: #00ffff;'>import</span> urllib2
+<pre class='src src-python'><span style='color: #fa8072;'>import</span> urllib
+<span style='color: #fa8072;'>import</span> urllib2
 
-<span style='color: #eedd82;'>url</span> = <span style='color: #ffa07a;'>'http://www.someserver.com/cgi-bin/register.cgi'</span>
-<span style='color: #eedd82;'>user_agent</span> = <span style='color: #ffa07a;'>'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'</span>
-<span style='color: #eedd82;'>values</span> = {<span style='color: #ffa07a;'>'name'</span> : <span style='color: #ffa07a;'>'Michael Foord'</span>,
+<span style='color: #7fffd4; font-weight: bold;'>url</span> = <span style='color: #ffa07a;'>'http://www.someserver.com/cgi-bin/register.cgi'</span>
+<span style='color: #7fffd4; font-weight: bold;'>user_agent</span> = <span style='color: #ffa07a;'>'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'</span>
+<span style='color: #7fffd4; font-weight: bold;'>values</span> = {<span style='color: #ffa07a;'>'name'</span> : <span style='color: #ffa07a;'>'Michael Foord'</span>,
 <span style='color: #ffa07a;'>'location'</span> : <span style='color: #ffa07a;'>'Northampton'</span>,
 <span style='color: #ffa07a;'>'language'</span> : <span style='color: #ffa07a;'>'Python'</span> }
-<span style='color: #eedd82;'>headers</span> = { <span style='color: #ffa07a;'>'User-Agent'</span> : user_agent }
+<span style='color: #7fffd4; font-weight: bold;'>headers</span> = { <span style='color: #ffa07a;'>'User-Agent'</span> : user_agent }
 
-<span style='color: #eedd82;'>data</span> = urllib.urlencode(values)
-<span style='color: #eedd82;'>req</span> = urllib2.Request(url, data, headers)
-<span style='color: #eedd82;'>response</span> = urllib2.urlopen(req)
-<span style='color: #eedd82;'>the_page</span> = response.read()
+<span style='color: #7fffd4; font-weight: bold;'>data</span> = urllib.urlencode(values)
+<span style='color: #7fffd4; font-weight: bold;'>req</span> = urllib2.Request(url, data, headers)
+<span style='color: #7fffd4; font-weight: bold;'>response</span> = urllib2.urlopen(req)
+<span style='color: #7fffd4; font-weight: bold;'>the_page</span> = response.read()
 </pre>
 </div>
 </div>
@@ -278,7 +278,7 @@ contains about the version of the OS and web browser
 </div>
 <div class='status' id='postamble'>
 <p class='author'>Author: zhang led</p>
-<p class='date'>Created: 2013-08-14 Wed 14:44</p>
+<p class='date'>Created: 2013-08-15 Thu 13:39</p>
 <p class='creator'><a href='http://www.gnu.org/software/emacs/'>Emacs</a> 23.4.1 (<a href='http://orgmode.org'>Org</a> mode 8.0.7)</p>
 <p class='xhtml-validation'><a href='http://validator.w3.org/check?uri=referer'>Validate XHTML 1.0</a></p>
 </div>
