@@ -5,8 +5,8 @@
         <description>斜风细雨不须归 - zhangzheyuk</description>
         <link>http://zhangzheyuk.github.com</link>
         <link>http://zhangzheyuk.github.com</link>
-        <lastBuildDate>2013-08-15T10:14:44+08:00</lastBuildDate>
-        <pubDate>2013-08-15T10:14:44+08:00</pubDate>
+        <lastBuildDate>2013-08-15T10:59:37+08:00</lastBuildDate>
+        <pubDate>2013-08-15T10:59:37+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -277,7 +277,7 @@ recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;编辑lilo.conf文件&lt;/p&gt;
 
-&lt;h4 id='id57'&gt;禁用相关帐号&lt;/h4&gt;
+&lt;h4 id='id53'&gt;禁用相关帐号&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -289,7 +289,7 @@ recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id='id58'&gt;选择适当密码&lt;/h4&gt;
+&lt;h4 id='id54'&gt;选择适当密码&lt;/h4&gt;
 
 &lt;p&gt;/etc/rsyslog.conf&lt;/p&gt;
 
@@ -409,7 +409,7 @@ char* owner;
 
 &lt;p&gt;1. category: 后面的空格不能省。。。开始我写成了category:sth.死活都不出&lt;/p&gt;
 
-&lt;p&gt;2. tags: 一定要加&lt;span /&gt;,即使是单个tag也必须加。。&lt;/p&gt;
+&lt;p&gt;2. tags: 一定要加[],即使是单个tag也必须加。。&lt;/p&gt;
 
 &lt;h3 id='markdown'&gt;在先编辑markdown文件很好的网站&lt;/h3&gt;
 

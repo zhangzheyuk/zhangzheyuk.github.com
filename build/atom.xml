@@ -4,7 +4,7 @@
  <title>斜风细雨不须归</title>
  <link href="http://zhangzheyuk.github.com/" rel="self"/>
  <link href="http://zhangzheyuk.github.com"/>
- <updated>2013-08-15T10:59:37+08:00</updated>
+ <updated>2013-08-15T10:52:51+08:00</updated>
  <id>http://zhangzheyuk.github.com</id>
  <author>
    <name>zhangzheyuk</name>
@@ -262,9 +262,9 @@ recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id='python_'&gt;Python 图像处理相关&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;1. 灰度以及PIL模块里的处理
-[Link](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
+\[Link\](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
 2. 有关图像搜索，相似图形比对
-[阮一峰的Blog](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)&lt;/code&gt;&lt;/pre&gt;</content>
+\[阮一峰的Blog\](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)&lt;/code&gt;&lt;/pre&gt;</content>
  </entry>
  
  <entry>
@@ -414,15 +414,15 @@ char* owner;
 
 &lt;p&gt;1. category: 后面的空格不能省。。。开始我写成了category:sth.死活都不出&lt;/p&gt;
 
-&lt;p&gt;2. tags: 一定要加[],即使是单个tag也必须加。。&lt;/p&gt;
+&lt;p&gt;2. tags: 一定要加&lt;span /&gt;,即使是单个tag也必须加。。&lt;/p&gt;
 
 &lt;h3 id='markdown'&gt;在先编辑markdown文件很好的网站&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href='http://mahua.jser.me/'&gt;http://mahua.jser.me/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[http://mahua.jser.me/](http://mahua.jser.me/)&lt;/p&gt;
 
 &lt;h3 id='emacsmarkdown_mode'&gt;Emacs下的Markdown mode&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href='http://linuxtoy.org/archives/emacs-markdown-mode.html'&gt;http://linuxtoy.org/archives/emacs-markdown-mode.html&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;[http://linuxtoy.org/archives/emacs-markdown-mode.html](http://linuxtoy.org/archives/emacs-markdown-mode.html)&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -430,7 +430,7 @@ char* owner;
    <link href="http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll"/>
    <updated>2013-03-28T00:00:00+08:00</updated>
    <id>http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll</id>
-   <content type="html">&lt;p&gt;三月份左右搭起这个Blog,大学毕业的时候玩过一阵wordpress,后来觉得维护起来比较麻烦于是就换到了&lt;a href='http://blog.chinaunix.net/uid/24701781.html'&gt;cu blog&lt;/a&gt;,再后来接触到github之后发现了这个东西，尝试一下~&lt;/p&gt;
+   <content type="html">&lt;p&gt;三月份左右搭起这个Blog,大学毕业的时候玩过一阵wordpress,后来觉得维护起来比较麻烦于是就换到了[cu blog](http://blog.chinaunix.net/uid/24701781.html),再后来接触到github之后发现了这个东西，尝试一下~&lt;/p&gt;
 
 &lt;p&gt;有的时候需要一个地方来记录一下想法与思绪，最近有点乱，按老板的话说就是需要停下来理一理思路了，慢慢 把之前Blog上的东西往这里挪吧。这是一个负责而艰巨的工程，毕竟刚开始接触Markdown，慢慢学习吧，路要一步一步走。&lt;/p&gt;</content>
  </entry>

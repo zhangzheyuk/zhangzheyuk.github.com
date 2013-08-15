@@ -59,7 +59,7 @@ Based on [this](http://www.ituring.com.cn/article/23)
 
    1. category: 后面的空格不能省。。。开始我写成了category:sth.死活都不出
 
-   2. tags: 一定要加[],即使是单个tag也必须加。。
+   2. tags: 一定要加\[\],即使是单个tag也必须加。。
 
 
 ###在先编辑markdown文件很好的网站

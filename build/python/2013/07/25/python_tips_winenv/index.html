@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>linux安全相关</title>
+    <title>Python tips</title>
     <meta name="description" content="">
     <meta name="author" content="zhangzheyuk">
 
@@ -108,54 +108,56 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>linux安全相关 </h1>
+  <h1>Python tips </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>11 July 2013</strong>
+      <span>25 July 2013</strong>
     </div>
     <div class="content">
-      <p>Based on <a href='http://linux.chinaitlab.com/safe/826400.html'>this</a></p>
+      <h4 id='python_win'>Python win下编程的问题</h4>
 
-<h4 id='bios'>BIOS安全</h4>
-
-<p>设置BIOS密码</p>
-
-<h4 id='lilo'>LILO安全</h4>
-
-<p>编辑lilo.conf文件</p>
-
-<h4 id='id53'>禁用相关帐号</h4>
-
-<ul>
-<li>
-<p>删除用户帐号: userdel demo</p>
-</li>
-
-<li>
-<p>删除群组号: groupdel demo</p>
-</li>
-</ul>
-
-<h4 id='id54'>选择适当密码</h4>
-
-<p>/etc/rsyslog.conf</p>
-
-<p>/etc/login.defs</p>
-
-<h4 id='suidsgid'>SUID/SGID</h4>
-
-<p>find / -perm -04000 -type f -ls</p>
+<p>在windows下想写个自动的脚本来玩玩，一旦在windows下果然各种各样的问题 纷纷搞出来了。</p>
 
 <ol>
-<li>with suid and sgid, use 6000 to search</li>
-
-<li>sgid , 2000</li>
-
-<li>suid , 4000</li>
+<li>首先是最关键的问题，How to run the python scripts,在linux下 根本不会操心这个问题呀，which python,有了直接执行就OK，我先装了 一个2.7的在windows下，然后把路径加到环境变量path里，自从大学学过 java以后好久没改过环境变量了。执行的时候CMD cd到目录下，跟linux 是一样的执行。 需要注意的是windows下cmd，是直接敲D: + enter直接换盘符，好久没 用，我还cd f:试了半天。。</li>
 </ol>
+
+<p>2. 中文编码格式的问题，我代码中注释加了几行中文，结果出来的</p>
+
+<pre><code>error SyntaxError:    
+Non-ASCII character &#39;\xc6&#39; in file game.py on    
+line 9, but no encoding declared; 
+see http://www.python.org/peps/pep-0263.html for details  </code></pre>
+
+<p>解决办法：# -<em>- coding: UTF-8 -</em>-指定编码格式。</p>
+
+<p>然后emacs又出问题了，我save的时候emacs报</p>
+
+<pre><code>Warning (mule): Invalid coding system &#39;UTF-8&#39; is specified 
+for the current buffer/file by the :coding tag. It is highly 
+recommended to fix it before writing to a file.</code></pre>
+
+<p>So, 改成# -<em>- coding: utf-8 -</em>- 妈妈再也不用担心我的学习了。。。</p>
+
+<h4 id='python_xrange_'>Python xrange 问题</h4>
+
+<pre><code> xrange
+ 函数说明：用法与range完全相同，所不同的是生成的不是一个数组，而是一个生成器。
+ xrange更适合用作循环里</code></pre>
+
+<h4 id='python_'>Python 逗号的问题</h4>
+
+<p>在计算海明距离有几行code没有看的特别明白。</p>
+
+<h4 id='python_'>Python 图像处理相关</h4>
+
+<pre><code>1. 灰度以及PIL模块里的处理
+\[Link\](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
+2. 有关图像搜索，相似图形比对
+\[阮一峰的Blog\](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)</code></pre>
     </div>
 
   
@@ -167,8 +169,8 @@
 
   
      
-    	<li><a href="/categories.html#Security-ref">
-    		Security <span>1</span>
+    	<li><a href="/categories.html#python-ref">
+    		python <span>2</span>
     	</a></li>
     
   
@@ -186,7 +188,9 @@
 
   
      
-    	<li><a href="/tags.html#Security-ref">Security <span>1</span></a></li>
+    	<li><a href="/tags.html#python-ref">python <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#图像搜索-ref">图像搜索 <span>1</span></a></li>
     
   
 
@@ -199,11 +203,11 @@
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/Personal/2013/06/30/binding-hostname" title="为博客绑定域名">&larr; Previous</a></li>
+        <li class="prev"><a href="/Security/2013/07/11/linux-security" title="linux安全相关">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/python/2013/07/25/python_tips_winenv" title="Python tips">Next &rarr;</a></li>
+        <li class="next"><a href="/jekyll/2013/08/14/org_convert_md" title="orgmode html jekyll各种折腾">Next &rarr;</a></li>
       
       </ul>
     </div>
@@ -213,7 +217,7 @@
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_developer = 1;
+    
     var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
     
     /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -244,6 +248,22 @@
     </div>
 
     
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-123-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
   </body>
 </html>
 

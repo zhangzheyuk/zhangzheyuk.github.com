@@ -1,23 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>斜风细雨不须归</title>
- <link href="http://zhangzheyuk.github.com/" rel="self"/>
- <link href="http://zhangzheyuk.github.com"/>
- <updated>2013-08-15T10:59:37+08:00</updated>
- <id>http://zhangzheyuk.github.com</id>
- <author>
-   <name>zhangzheyuk</name>
-   <email>zhangzheyuk@gmail.com</email>
- </author>
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>斜风细雨不须归</title>
+        <description>斜风细雨不须归 - zhangzheyuk</description>
+        <link>http://zhangzheyuk.github.com</link>
+        <link>http://zhangzheyuk.github.com</link>
+        <lastBuildDate>2013-08-15T10:52:51+08:00</lastBuildDate>
+        <pubDate>2013-08-15T10:52:51+08:00</pubDate>
+        <ttl>1800</ttl>
 
- 
- <entry>
-   <title>urllib2 intro</title>
-   <link href="http://zhangzheyuk.github.com/python/2013/08/14/urllib2_intro"/>
-   <updated>2013-08-14T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/python/2013/08/14/urllib2_intro</id>
-   <content type="html">&lt;body&gt;
+
+        <item>
+                <title>urllib2 intro</title>
+                <description>&lt;body&gt;
 &lt;div id='content'&gt;
 &lt;h1 class='title'&gt;python urllib2 intro&lt;/h1&gt;
 &lt;div id='table-of-contents'&gt;
@@ -182,15 +177,15 @@ contains about the version of the OS and web browser
 &lt;p class='creator'&gt;&lt;a href='http://www.gnu.org/software/emacs/'&gt;Emacs&lt;/a&gt; 23.4.1 (&lt;a href='http://orgmode.org'&gt;Org&lt;/a&gt; mode 8.0.7)&lt;/p&gt;
 &lt;p class='xhtml-validation'&gt;&lt;a href='http://validator.w3.org/check?uri=referer'&gt;Validate XHTML 1.0&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/body&gt;</content>
- </entry>
- 
- <entry>
-   <title>orgmode html jekyll各种折腾</title>
-   <link href="http://zhangzheyuk.github.com/jekyll/2013/08/14/org_convert_md"/>
-   <updated>2013-08-14T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/jekyll/2013/08/14/org_convert_md</id>
-   <content type="html">&lt;div id='table-of-contents'&gt;
+&lt;/body&gt;</description>
+                <link>http://zhangzheyuk.github.com/python/2013/08/14/urllib2_intro</link>
+                <guid>http://zhangzheyuk.github.com/python/2013/08/14/urllib2_intro</guid>
+                <pubDate>2013-08-14T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>orgmode html jekyll各种折腾</title>
+                <description>&lt;div id='table-of-contents'&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id='text-table-of-contents'&gt;
 &lt;ul&gt;
@@ -216,15 +211,15 @@ contains about the version of the OS and web browser
 &lt;li&gt;
 &lt;p&gt;最后我在publish的时候发现了一个非常关键的问题，我一直执着与要 在post里放入html文件。其实只需要把org导出的html的body部分copy 出来放在md文件里就OK了。。。还可以很完美的使用css的效果。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content>
- </entry>
- 
- <entry>
-   <title>Python tips</title>
-   <link href="http://zhangzheyuk.github.com/python/2013/07/25/python_tips_winenv"/>
-   <updated>2013-07-25T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/python/2013/07/25/python_tips_winenv</id>
-   <content type="html">&lt;h4 id='python_win'&gt;Python win下编程的问题&lt;/h4&gt;
+&lt;/ul&gt;</description>
+                <link>http://zhangzheyuk.github.com/jekyll/2013/08/14/org_convert_md</link>
+                <guid>http://zhangzheyuk.github.com/jekyll/2013/08/14/org_convert_md</guid>
+                <pubDate>2013-08-14T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Python tips</title>
+                <description>&lt;h4 id='python_win'&gt;Python win下编程的问题&lt;/h4&gt;
 
 &lt;p&gt;在windows下想写个自动的脚本来玩玩，一旦在windows下果然各种各样的问题 纷纷搞出来了。&lt;/p&gt;
 
@@ -262,17 +257,17 @@ recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id='python_'&gt;Python 图像处理相关&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;1. 灰度以及PIL模块里的处理
-[Link](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
+\[Link\](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
 2. 有关图像搜索，相似图形比对
-[阮一峰的Blog](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)&lt;/code&gt;&lt;/pre&gt;</content>
- </entry>
- 
- <entry>
-   <title>linux安全相关</title>
-   <link href="http://zhangzheyuk.github.com/Security/2013/07/11/linux-security"/>
-   <updated>2013-07-11T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/Security/2013/07/11/linux-security</id>
-   <content type="html">&lt;p&gt;Based on &lt;a href='http://linux.chinaitlab.com/safe/826400.html'&gt;this&lt;/a&gt;&lt;/p&gt;
+\[阮一峰的Blog\](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)&lt;/code&gt;&lt;/pre&gt;</description>
+                <link>http://zhangzheyuk.github.com/python/2013/07/25/python_tips_winenv</link>
+                <guid>http://zhangzheyuk.github.com/python/2013/07/25/python_tips_winenv</guid>
+                <pubDate>2013-07-25T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>linux安全相关</title>
+                <description>&lt;p&gt;Based on &lt;a href='http://linux.chinaitlab.com/safe/826400.html'&gt;this&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id='bios'&gt;BIOS安全&lt;/h4&gt;
 
@@ -310,15 +305,15 @@ recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;sgid , 2000&lt;/li&gt;
 
 &lt;li&gt;suid , 4000&lt;/li&gt;
-&lt;/ol&gt;</content>
- </entry>
- 
- <entry>
-   <title>为博客绑定域名</title>
-   <link href="http://zhangzheyuk.github.com/Personal/2013/06/30/binding-hostname"/>
-   <updated>2013-06-30T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/Personal/2013/06/30/binding-hostname</id>
-   <content type="html">&lt;ul&gt;
+&lt;/ol&gt;</description>
+                <link>http://zhangzheyuk.github.com/Security/2013/07/11/linux-security</link>
+                <guid>http://zhangzheyuk.github.com/Security/2013/07/11/linux-security</guid>
+                <pubDate>2013-07-11T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>为博客绑定域名</title>
+                <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;今天想起来突然也没什么要紧的事情，从青哥家里回来之后，想起来Blog一直没有绑定个域名玩一玩，就从jekyll bootstrap 官网找了找方法，貌似也没有什么特别更清楚的介绍,看了看jb 的_config文件里，是比较简单的配置，其实就是在repo里建一个CNAME的文件就行了，去几个卖域名的网站搜了搜，想要的都被人买掉了，于是只能做罢。&lt;/p&gt;
 &lt;/li&gt;
@@ -326,29 +321,29 @@ recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;
 &lt;p&gt;我是刚开始看到阮一峰的博客里提到Blog like a hack来介绍jekyll的文章才想试一试，顺便练练手对于Git,下面评论里有些人的论调让人感觉很无语，说阮兄这么推广，会引来许多大众的蛀虫之类的东西，然后还提到说sourceforge因为中国大陆很多人占资源又不做贡献之类的。我真想问一问这些所谓的“精英”，哪一个好的互联网产品不希望用的人越多越好，这些人对github藏着掖着生怕别人学会了比他强的心态真是有病，分享是快乐的,提高的，君不见你们这些人为kernel贡献了几行代码，你们用vim，为乌干达的儿童捐过多少钱？你们用stardict,为那个单恋女神的男青年捐过多少钱？这些人压根就是我上文说的心态，生怕好的东西被别人知道了。月光博客也曾在博客里批中国大陆的网民素质低啊，不作为啊，没错，中国大陆的网民素质确实不怎么样，但是现在的免费模式下，人家阻碍你什么了，大家都是公平的用户，人家享受自己免费的服务，跟你有一毛钱关系？这种看法的本质就是骨子里的给人分等级，好像受过一点教育就高人一等，满嘴喊着民主自由，奈何骨子里都是尊卑贵贱，真是可笑。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content>
- </entry>
- 
- <entry>
-   <title>烟雨江南</title>
-   <link href="http://zhangzheyuk.github.com/Personal/2013/06/28/jiangnan_sanwen"/>
-   <updated>2013-06-28T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/Personal/2013/06/28/jiangnan_sanwen</id>
-   <content type="html">&lt;p&gt;- 烟雨朦胧的小镇,白衣的男子，牵着一匹枣红的瘦马。青石板小道轻轻的脚步，马项上叮咚作响的 铃铛,轻扣着她的心房。推开窗，闪出一条缝，羞涩地撇了一眼，两腮立刻通红，随即关上小窗， 回忆那瞬间眼神里的温柔，一颗心儿扑通扑通地跳。他驻足凝视着窗口，只是因为闪电般的目光交 接与她那一闪而过的娇羞，此时只剩一人一马静静的望着那扇紧闭的小窗……&lt;/p&gt;
+&lt;/ul&gt;</description>
+                <link>http://zhangzheyuk.github.com/Personal/2013/06/30/binding-hostname</link>
+                <guid>http://zhangzheyuk.github.com/Personal/2013/06/30/binding-hostname</guid>
+                <pubDate>2013-06-30T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>烟雨江南</title>
+                <description>&lt;p&gt;- 烟雨朦胧的小镇,白衣的男子，牵着一匹枣红的瘦马。青石板小道轻轻的脚步，马项上叮咚作响的 铃铛,轻扣着她的心房。推开窗，闪出一条缝，羞涩地撇了一眼，两腮立刻通红，随即关上小窗， 回忆那瞬间眼神里的温柔，一颗心儿扑通扑通地跳。他驻足凝视着窗口，只是因为闪电般的目光交 接与她那一闪而过的娇羞，此时只剩一人一马静静的望着那扇紧闭的小窗……&lt;/p&gt;
 
 &lt;p&gt;- 或许可以想象以后发生的故事，一张梨木雕花的书桌，洁白的宣纸，他右手轻轻的握着她的手, 收笔，然后两人相拥着静静看着纸上的那首小诗，隽秀的字迹“十里平湖霜满天 ,寸寸青丝愁华年。 对月形单望相互 ，只羡鸳鸯不羡仙。”亦或者这一切原本只是个美丽的错误，这一切都发生在少年 的梦里。&lt;/p&gt;
 
 &lt;p&gt;- 常幻想着自己一席长袍，左手边一杯清茗，右手一卷宋词，端坐于竹屋中，看着窗外的细雨抚过那 满山的翠绿。想必在这样一间竹屋中听那深山的夜雨也别有一番风味吧！面对着润洗过的青山，呼 吸着带有淡淡竹香的空气，仿佛真的心若明镜台了。屋前小径上残留着雨后的痕迹，这古诗般的意 境让人禁不住怀疑，哪一汪是新词，哪一渍又是谁留下的韵脚，莫非唐诗宋词已随着空气浸骨入膏？ 这所有的一切都是一个少年的梦，少年总是多梦的，可这梦中的竹屋却总显得那么真实，而我只是 静静的看着，生怕打破了这易碎的梦。&lt;/p&gt;
 
-&lt;p&gt;- 梦中的少年还常与古人手谈论道，黑白之间，方寸天地，论的却是天地之道，“天地不仁，以万物 为刍狗，圣人不仁，以百姓为刍狗”。少年极喜《兰亭集序》，十分欣赏这句话“向之所欣，俯仰之 间，以为陈迹”，此句人阅之顿生白云苍狗之感，少年更爱的是这行云流水般的墨迹，总喜欢幻想自 己徜徉于笔墨之间，墨香混着狼毫笔的淡雅，无酒自醉。这一切显得是那么美，多梦的少年，不想 堕于肮脏势利，于是他只能选择做那棵树，那棵顽固的守护着自己的精神月亮的树。&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>jekyll本地调试成功，github没更新</title>
-   <link href="http://zhangzheyuk.github.com/jekyll/2013/06/27/jekyll-update-fail"/>
-   <updated>2013-06-27T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/jekyll/2013/06/27/jekyll-update-fail</id>
-   <content type="html">&lt;ul&gt;
+&lt;p&gt;- 梦中的少年还常与古人手谈论道，黑白之间，方寸天地，论的却是天地之道，“天地不仁，以万物 为刍狗，圣人不仁，以百姓为刍狗”。少年极喜《兰亭集序》，十分欣赏这句话“向之所欣，俯仰之 间，以为陈迹”，此句人阅之顿生白云苍狗之感，少年更爱的是这行云流水般的墨迹，总喜欢幻想自 己徜徉于笔墨之间，墨香混着狼毫笔的淡雅，无酒自醉。这一切显得是那么美，多梦的少年，不想 堕于肮脏势利，于是他只能选择做那棵树，那棵顽固的守护着自己的精神月亮的树。&lt;/p&gt;</description>
+                <link>http://zhangzheyuk.github.com/Personal/2013/06/28/jiangnan_sanwen</link>
+                <guid>http://zhangzheyuk.github.com/Personal/2013/06/28/jiangnan_sanwen</guid>
+                <pubDate>2013-06-28T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>jekyll本地调试成功，github没更新</title>
+                <description>&lt;ul&gt;
 &lt;li&gt;今天Update了一下blog，访问的时候发现总是没有更新，就觉得非常奇怪，我还以为是github的问题，&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -362,15 +357,15 @@ recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;清理完缓存之后，发现还是不行，下楼找别人访问，结果发现居然跟我一样是错误的结果，我就纳闷了。忽然&lt;/p&gt;
 
-&lt;p&gt;想到可能是我们用的proxy有问题，它把网页放到cache里了，于是我用手机访问，果然没问题。坑爹的代理.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Markdown learning notes</title>
-   <link href="http://zhangzheyuk.github.com/Markdown/2013/06/26/markdown-learning-notes"/>
-   <updated>2013-06-26T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/Markdown/2013/06/26/markdown-learning-notes</id>
-   <content type="html">&lt;h3 id='markdown'&gt;Markdown常用语法&lt;/h3&gt;
+&lt;p&gt;想到可能是我们用的proxy有问题，它把网页放到cache里了，于是我用手机访问，果然没问题。坑爹的代理.&lt;/p&gt;</description>
+                <link>http://zhangzheyuk.github.com/jekyll/2013/06/27/jekyll-update-fail</link>
+                <guid>http://zhangzheyuk.github.com/jekyll/2013/06/27/jekyll-update-fail</guid>
+                <pubDate>2013-06-27T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Markdown learning notes</title>
+                <description>&lt;h3 id='markdown'&gt;Markdown常用语法&lt;/h3&gt;
 
 &lt;p&gt;Based on &lt;a href='http://www.ituring.com.cn/article/23'&gt;this&lt;/a&gt;&lt;/p&gt;
 
@@ -414,26 +409,30 @@ char* owner;
 
 &lt;p&gt;1. category: 后面的空格不能省。。。开始我写成了category:sth.死活都不出&lt;/p&gt;
 
-&lt;p&gt;2. tags: 一定要加[],即使是单个tag也必须加。。&lt;/p&gt;
+&lt;p&gt;2. tags: 一定要加&lt;span /&gt;,即使是单个tag也必须加。。&lt;/p&gt;
 
 &lt;h3 id='markdown'&gt;在先编辑markdown文件很好的网站&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href='http://mahua.jser.me/'&gt;http://mahua.jser.me/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[http://mahua.jser.me/](http://mahua.jser.me/)&lt;/p&gt;
 
 &lt;h3 id='emacsmarkdown_mode'&gt;Emacs下的Markdown mode&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href='http://linuxtoy.org/archives/emacs-markdown-mode.html'&gt;http://linuxtoy.org/archives/emacs-markdown-mode.html&lt;/a&gt;&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Build my own blog by jekyll</title>
-   <link href="http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll"/>
-   <updated>2013-03-28T00:00:00+08:00</updated>
-   <id>http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll</id>
-   <content type="html">&lt;p&gt;三月份左右搭起这个Blog,大学毕业的时候玩过一阵wordpress,后来觉得维护起来比较麻烦于是就换到了&lt;a href='http://blog.chinaunix.net/uid/24701781.html'&gt;cu blog&lt;/a&gt;,再后来接触到github之后发现了这个东西，尝试一下~&lt;/p&gt;
+&lt;p&gt;[http://linuxtoy.org/archives/emacs-markdown-mode.html](http://linuxtoy.org/archives/emacs-markdown-mode.html)&lt;/p&gt;</description>
+                <link>http://zhangzheyuk.github.com/Markdown/2013/06/26/markdown-learning-notes</link>
+                <guid>http://zhangzheyuk.github.com/Markdown/2013/06/26/markdown-learning-notes</guid>
+                <pubDate>2013-06-26T00:00:00+08:00</pubDate>
+        </item>
 
-&lt;p&gt;有的时候需要一个地方来记录一下想法与思绪，最近有点乱，按老板的话说就是需要停下来理一理思路了，慢慢 把之前Blog上的东西往这里挪吧。这是一个负责而艰巨的工程，毕竟刚开始接触Markdown，慢慢学习吧，路要一步一步走。&lt;/p&gt;</content>
- </entry>
- 
- 
-</feed>
+        <item>
+                <title>Build my own blog by jekyll</title>
+                <description>&lt;p&gt;三月份左右搭起这个Blog,大学毕业的时候玩过一阵wordpress,后来觉得维护起来比较麻烦于是就换到了[cu blog](http://blog.chinaunix.net/uid/24701781.html),再后来接触到github之后发现了这个东西，尝试一下~&lt;/p&gt;
+
+&lt;p&gt;有的时候需要一个地方来记录一下想法与思绪，最近有点乱，按老板的话说就是需要停下来理一理思路了，慢慢 把之前Blog上的东西往这里挪吧。这是一个负责而艰巨的工程，毕竟刚开始接触Markdown，慢慢学习吧，路要一步一步走。&lt;/p&gt;</description>
+                <link>http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll</link>
+                <guid>http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll</guid>
+                <pubDate>2013-03-28T00:00:00+08:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>

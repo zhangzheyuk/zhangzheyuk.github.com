@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>linux安全相关</title>
+    <title>orgmode html jekyll各种折腾</title>
     <meta name="description" content="">
     <meta name="author" content="zhangzheyuk">
 
@@ -108,54 +108,42 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>linux安全相关 </h1>
+  <h1>orgmode html jekyll各种折腾 </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>11 July 2013</strong>
+      <span>14 August 2013</strong>
     </div>
     <div class="content">
-      <p>Based on <a href='http://linux.chinaitlab.com/safe/826400.html'>this</a></p>
-
-<h4 id='bios'>BIOS安全</h4>
-
-<p>设置BIOS密码</p>
-
-<h4 id='lilo'>LILO安全</h4>
-
-<p>编辑lilo.conf文件</p>
-
-<h4 id='id53'>禁用相关帐号</h4>
+      <div id='table-of-contents'>
+<h2>Table of Contents</h2>
+<div id='text-table-of-contents'>
+<ul>
+<li><a href='#sec-1'>1. 关于配置Jekyll的html post</a></li>
+</ul>
+</div>
+</div>
+<h1 id='jekyllhtml'>关于配置Jekyll的html</h1>
 
 <ul>
 <li>
-<p>删除用户帐号: userdel demo</p>
+<p>记录下来今天的折腾，我的需求本来是希望jekyll能支持html的显示， 这样的话，我每次写blog的时候就只需要用org然后export生成html 就OK了，虽然makedown的语法也是很方便，但是毕竟还是用org的比较 习惯。</p>
 </li>
 
 <li>
-<p>删除群组号: groupdel demo</p>
+<p>查了jekyll的官方document，没有确切的说明直接可以在<sub>post里解</sub> 析，看了orgmode的网站上有一篇是直接使用org写jekyll，但是悲剧 的是我用的是JB在jekyll上的二次封装，本身我对web也不是很熟悉， 估计会花很大的effort,这就跟我的目的不一样了，不是我学习的重点</p>
+</li>
+
+<li>
+<p>最后在orgmode的manul里发现了最新版本的org支持从org file exprot 出.md文件。兴高彩烈的安了最新版本的orgmode，结果C-c, C-e之后 发现emacs报错了。。definition is void: org-defvaralias&#8221; 回头排查init.el的时候发现之前加过一个O-blog的插件，把load删除 掉之后终于可以用了。下一步就是定制org-export出的md文件前面把 title加上就ok了。</p>
+</li>
+
+<li>
+<p>最后我在publish的时候发现了一个非常关键的问题，我一直执着与要 在post里放入html文件。其实只需要把org导出的html的body部分copy 出来放在md文件里就OK了。。。还可以很完美的使用css的效果。</p>
 </li>
 </ul>
-
-<h4 id='id54'>选择适当密码</h4>
-
-<p>/etc/rsyslog.conf</p>
-
-<p>/etc/login.defs</p>
-
-<h4 id='suidsgid'>SUID/SGID</h4>
-
-<p>find / -perm -04000 -type f -ls</p>
-
-<ol>
-<li>with suid and sgid, use 6000 to search</li>
-
-<li>sgid , 2000</li>
-
-<li>suid , 4000</li>
-</ol>
     </div>
 
   
@@ -167,8 +155,8 @@
 
   
      
-    	<li><a href="/categories.html#Security-ref">
-    		Security <span>1</span>
+    	<li><a href="/categories.html#jekyll-ref">
+    		jekyll <span>2</span>
     	</a></li>
     
   
@@ -186,7 +174,7 @@
 
   
      
-    	<li><a href="/tags.html#Security-ref">Security <span>1</span></a></li>
+    	<li><a href="/tags.html#jekyll-ref">jekyll <span>2</span></a></li>
     
   
 
@@ -199,11 +187,11 @@
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/Personal/2013/06/30/binding-hostname" title="为博客绑定域名">&larr; Previous</a></li>
+        <li class="prev"><a href="/python/2013/07/25/python_tips_winenv" title="Python tips">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/python/2013/07/25/python_tips_winenv" title="Python tips">Next &rarr;</a></li>
+        <li class="next"><a href="/python/2013/08/14/urllib2_intro" title="urllib2 intro">Next &rarr;</a></li>
       
       </ul>
     </div>
@@ -213,7 +201,7 @@
 
   <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_developer = 1;
+    
     var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
     
     /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -244,6 +232,22 @@
     </div>
 
     
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-123-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
   </body>
 </html>
 
