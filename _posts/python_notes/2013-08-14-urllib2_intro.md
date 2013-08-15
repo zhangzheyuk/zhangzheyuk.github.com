@@ -6,7 +6,6 @@ category: python
 tags: [python]
 ---
 {% include JB/setup %}
-<body>
 <div id="content">
 <h1 class="title">python urllib2 intro</h1>
 <div id="table-of-contents">
@@ -171,4 +170,3 @@ contains about the version of the OS and web browser
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 23.4.1 (<a href="http://orgmode.org">Org</a> mode 8.0.7)</p>
 <p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
 </div>
-</body>
