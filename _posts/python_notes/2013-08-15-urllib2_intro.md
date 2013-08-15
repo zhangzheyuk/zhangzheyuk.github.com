@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "html.md"
+title: "urllib2 intro"
 description: ""
 category: python 
 tags: [python]
@@ -165,9 +165,7 @@ contains about the version of the OS and web browser
 <div id="outline-container-sec-7" class="outline-2">
 <h2 id="sec-7"><span class="section-number-2">7</span> Error handling</h2>
 </div>
-
 </div>
-
 <div id="postamble" class="status">
 <p class="author">Author: zhang led</p>
 <p class="date">Created: 2013-08-15 Thu 13:39</p>

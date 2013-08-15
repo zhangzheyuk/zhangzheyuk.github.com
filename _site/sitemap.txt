@@ -9,8 +9,7 @@ http://zhangzheyuk.github.com/sitemap.txt
 http://zhangzheyuk.github.com/atom.xml
 http://zhangzheyuk.github.com/index.html
 
-http://zhangzheyuk.github.com/python/2013/08/15/htmlmd
-http://zhangzheyuk.github.com/python/2013/08/14/urllib2_intro
+http://zhangzheyuk.github.com/python/2013/08/15/urllib2_intro
 http://zhangzheyuk.github.com/jekyll/2013/08/14/org_convert_md
 http://zhangzheyuk.github.com/python/2013/07/25/python_tips_winenv
 http://zhangzheyuk.github.com/Security/2013/07/11/linux-security
