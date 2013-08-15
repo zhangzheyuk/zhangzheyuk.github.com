@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>斜风细雨不须归</title>
+ <link href="http://zhangzheyuk.github.com/" rel="self"/>
+ <link href="http://zhangzheyuk.github.com"/>
+ <updated>2013-08-15T09:24:18+08:00</updated>
+ <id>http://zhangzheyuk.github.com</id>
+ <author>
+   <name>zhangzheyuk</name>
+   <email>zhangzheyuk@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>urllib2 intro</title>
+   <link href="http://zhangzheyuk.github.com/python/2013/08/14/urllib2_intro"/>
+   <updated>2013-08-14T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/python/2013/08/14/urllib2_intro</id>
+   <content type="html">&lt;body&gt;
+&lt;div id='content'&gt;
+&lt;h1 class='title'&gt;python urllib2 intro&lt;/h1&gt;
+&lt;div id='table-of-contents'&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id='text-table-of-contents'&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='#sec-1'&gt;1. ulrlib2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href='#sec-2'&gt;2. Basic use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href='#sec-3'&gt;3. use the urllib to mirror a Request&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href='#sec-4'&gt;4. use the urllib to construct a POST request&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href='#sec-5'&gt;5. GET request&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href='#sec-6'&gt;6. Headers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href='#sec-7'&gt;7. Error handling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class='outline-2' id='outline-container-sec-1'&gt;
+&lt;h2 id='sec-1'&gt;&lt;span class='section-number-2'&gt;1&lt;/span&gt; ulrlib2&lt;/h2&gt;
+&lt;div class='outline-text-2' id='text-1'&gt;
+&lt;p&gt;
+based on the python manual &quot;how to&quot; part
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class='outline-2' id='outline-container-sec-2'&gt;
+&lt;h2 id='sec-2'&gt;&lt;span class='section-number-2'&gt;2&lt;/span&gt; Basic use&lt;/h2&gt;
+&lt;div class='outline-text-2' id='text-2'&gt;
+&lt;p&gt;
+try to get fetch the webpage
+&lt;/p&gt;
+
+&lt;div class='org-src-container'&gt;
+
+&lt;pre class='src src-python'&gt;&lt;span class='linenr'&gt;1: &lt;/span&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2 
+&lt;span class='linenr'&gt;2: &lt;/span&gt;&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(&lt;span style='color: #ffa07a;'&gt;'http://python.org/'&lt;/span&gt;)
+&lt;span class='linenr'&gt;3: &lt;/span&gt;&lt;span style='color: #eedd82;'&gt;html&lt;/span&gt; = reponse.read()
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class='outline-2' id='outline-container-sec-3'&gt;
+&lt;h2 id='sec-3'&gt;&lt;span class='section-number-2'&gt;3&lt;/span&gt; use the urllib to mirror a Request&lt;/h2&gt;
+&lt;div class='outline-text-2' id='text-3'&gt;
+&lt;div class='org-src-container'&gt;
+
+&lt;pre class='src src-python'&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2
+
+&lt;span style='color: #eedd82;'&gt;req&lt;/span&gt; =  urllib2.Request(&lt;span style='color: #ffa07a;'&gt;'http://www.voidspace.org.uk'&lt;/span&gt;)
+&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
+&lt;span style='color: #eedd82;'&gt;the_page&lt;/span&gt; = response.read()
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class='outline-2' id='outline-container-sec-4'&gt;
+&lt;h2 id='sec-4'&gt;&lt;span class='section-number-2'&gt;4&lt;/span&gt; use the urllib to construct a POST request&lt;/h2&gt;
+&lt;div class='outline-text-2' id='text-4'&gt;
+&lt;p&gt;
+(can use this feature to do the auto authetication)
+&lt;/p&gt;
+
+&lt;div class='org-src-container'&gt;
+
+&lt;pre class='src src-python'&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib
+&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2
+
+&lt;span style='color: #eedd82;'&gt;url&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'http://www/someserver.com/cgi-bin/register.cgi'&lt;/span&gt;
+&lt;span style='color: #eedd82;'&gt;value&lt;/span&gt; = {&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Led Chang'&lt;/span&gt;
+&lt;span style='color: #ffa07a;'&gt;'location'&lt;/span&gt;: &lt;span style='color: #ffa07a;'&gt;'QD'&lt;/span&gt;
+&lt;span style='color: #ffa07a;'&gt;'language'&lt;/span&gt;: &lt;span style='color: #ffa07a;'&gt;'Python'&lt;/span&gt;}
+
+&lt;span style='color: #eedd82;'&gt;data&lt;/span&gt; = urllib.urlencode(values)
+&lt;span style='color: #eedd82;'&gt;req&lt;/span&gt; = urllib2.Request(url, data)
+&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
+&lt;span style='color: #eedd82;'&gt;the_page&lt;/span&gt; = response.read()
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class='outline-2' id='outline-container-sec-5'&gt;
+&lt;h2 id='sec-5'&gt;&lt;span class='section-number-2'&gt;5&lt;/span&gt; GET request&lt;/h2&gt;
+&lt;div class='outline-text-2' id='text-5'&gt;
+&lt;p&gt;
+GET request 明文传输数据
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+get and post (转)
+原理介绍：理论上说，GET是从服务器上请求数据，POST是发送数据到服务器。事实上，GET方法是把数据参数队列（query string）加到一个URL上，值和表单是一一对应的。比如说，name=John。在队列里，值和表单用一个&amp;amp;符号分开，空格用+号替换，特 殊的符号转换成十六进制的代码。因为这一队列在URL里边，这样队列的参数就能看得到，可以被记录下来，或更改。通常GET方法还限制字符的大小（大概是 256字节 ）。事实上POST方法可以没有时间限制的传递数据到服务器，用户在浏览器端是看不到这一过程的，所以POST方法比较适合用于发送一个保密的（比如信用 卡号）或者比较大量的数据到服务器。
+GET是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到
+POST是通过HTTP POST机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。
+对于GET方式，服务器端用Request.QueryString获取变量的值，
+对于POST方式，服务器端用Request.Form获取提交的数据。
+&lt;/p&gt;
+
+&lt;p&gt;
+区别：
+Post是允许传输大量数据的方法，而Get方法会将所要传输的数据附在网址后面，然后一起送达服务器，因此传送的数据量就会受到限制，但是执行效率却比Post方法好。 
+&lt;/p&gt;
+
+
+&lt;p&gt;
+建议：
+1、get方式的安全性较Post方式要差些，包含机密信息的话，建议用Post数据提交方式；
+2、在做数据查询时，建议用Get方式；而在做数据添加、修改或删除时，建议用Post方式；
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class='org-src-container'&gt;
+
+&lt;pre class='src src-python'&gt;&amp;gt;&amp;gt;&amp;gt; &lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib
+&amp;gt;&amp;gt;&amp;gt; data={}
+&amp;gt;&amp;gt;&amp;gt; data[&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt;] = &lt;span style='color: #ffa07a;'&gt;'Somebody Here'&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt; data[&lt;span style='color: #ffa07a;'&gt;'location'&lt;/span&gt;] = &lt;span style='color: #ffa07a;'&gt;'Northampton'&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt; data[&lt;span style='color: #ffa07a;'&gt;'language'&lt;/span&gt;] = &lt;span style='color: #ffa07a;'&gt;'Python'&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt; url_values = urllib.urlencode(data)
+&amp;gt;&amp;gt;&amp;gt; &lt;span style='color: #00ffff;'&gt;print&lt;/span&gt; url_values
+&lt;span style='color: #eedd82;'&gt;name&lt;/span&gt;=Somebody+Here&amp;amp;language=Python&amp;amp;location=Northampton
+&amp;gt;&amp;gt;&amp;gt; url = &lt;span style='color: #ffa07a;'&gt;'http://www.example.com/example.cgi'&lt;/span&gt;
+&amp;gt;&amp;gt;&amp;gt; full_url = url + &lt;span style='color: #ffa07a;'&gt;'?'&lt;/span&gt; + url_values
+&amp;gt;&amp;gt;&amp;gt; data = urllib2.urlopen(full_url)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class='outline-2' id='outline-container-sec-6'&gt;
+&lt;h2 id='sec-6'&gt;&lt;span class='section-number-2'&gt;6&lt;/span&gt; Headers&lt;/h2&gt;
+&lt;div class='outline-text-2' id='text-6'&gt;
+&lt;p&gt;
+add headers to the HTTP request
+contains about the version of the OS and web browser
+&lt;/p&gt;
+
+&lt;div class='org-src-container'&gt;
+
+&lt;pre class='src src-python'&gt;&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib
+&lt;span style='color: #00ffff;'&gt;import&lt;/span&gt; urllib2
+
+&lt;span style='color: #eedd82;'&gt;url&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'http://www.someserver.com/cgi-bin/register.cgi'&lt;/span&gt;
+&lt;span style='color: #eedd82;'&gt;user_agent&lt;/span&gt; = &lt;span style='color: #ffa07a;'&gt;'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'&lt;/span&gt;
+&lt;span style='color: #eedd82;'&gt;values&lt;/span&gt; = {&lt;span style='color: #ffa07a;'&gt;'name'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Michael Foord'&lt;/span&gt;,
+&lt;span style='color: #ffa07a;'&gt;'location'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Northampton'&lt;/span&gt;,
+&lt;span style='color: #ffa07a;'&gt;'language'&lt;/span&gt; : &lt;span style='color: #ffa07a;'&gt;'Python'&lt;/span&gt; }
+&lt;span style='color: #eedd82;'&gt;headers&lt;/span&gt; = { &lt;span style='color: #ffa07a;'&gt;'User-Agent'&lt;/span&gt; : user_agent }
+
+&lt;span style='color: #eedd82;'&gt;data&lt;/span&gt; = urllib.urlencode(values)
+&lt;span style='color: #eedd82;'&gt;req&lt;/span&gt; = urllib2.Request(url, data, headers)
+&lt;span style='color: #eedd82;'&gt;response&lt;/span&gt; = urllib2.urlopen(req)
+&lt;span style='color: #eedd82;'&gt;the_page&lt;/span&gt; = response.read()
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class='outline-2' id='outline-container-sec-7'&gt;
+&lt;h2 id='sec-7'&gt;&lt;span class='section-number-2'&gt;7&lt;/span&gt; Error handling&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class='status' id='postamble'&gt;
+&lt;p class='author'&gt;Author: zhang led&lt;/p&gt;
+&lt;p class='date'&gt;Created: 2013-08-14 Wed 14:44&lt;/p&gt;
+&lt;p class='creator'&gt;&lt;a href='http://www.gnu.org/software/emacs/'&gt;Emacs&lt;/a&gt; 23.4.1 (&lt;a href='http://orgmode.org'&gt;Org&lt;/a&gt; mode 8.0.7)&lt;/p&gt;
+&lt;p class='xhtml-validation'&gt;&lt;a href='http://validator.w3.org/check?uri=referer'&gt;Validate XHTML 1.0&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>orgmode html jekyll各种折腾</title>
+   <link href="http://zhangzheyuk.github.com/jekyll/2013/08/14/org_convert_md"/>
+   <updated>2013-08-14T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/jekyll/2013/08/14/org_convert_md</id>
+   <content type="html">&lt;div id='table-of-contents'&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id='text-table-of-contents'&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='#sec-1'&gt;1. 关于配置Jekyll的html post&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h1 id='jekyllhtml'&gt;关于配置Jekyll的html&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;记录下来今天的折腾，我的需求本来是希望jekyll能支持html的显示， 这样的话，我每次写blog的时候就只需要用org然后export生成html 就OK了，虽然makedown的语法也是很方便，但是毕竟还是用org的比较 习惯。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;查了jekyll的官方document，没有确切的说明直接可以在&lt;sub&gt;post里解&lt;/sub&gt; 析，看了orgmode的网站上有一篇是直接使用org写jekyll，但是悲剧 的是我用的是JB在jekyll上的二次封装，本身我对web也不是很熟悉， 估计会花很大的effort,这就跟我的目的不一样了，不是我学习的重点&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;最后在orgmode的manul里发现了最新版本的org支持从org file exprot 出.md文件。兴高彩烈的安了最新版本的orgmode，结果C-c, C-e之后 发现emacs报错了。。definition is void: org-defvaralias&amp;#8221; 回头排查init.el的时候发现之前加过一个O-blog的插件，把load删除 掉之后终于可以用了。下一步就是定制org-export出的md文件前面把 title加上就ok了。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;最后我在publish的时候发现了一个非常关键的问题，我一直执着与要 在post里放入html文件。其实只需要把org导出的html的body部分copy 出来放在md文件里就OK了。。。还可以很完美的使用css的效果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Python tips</title>
+   <link href="http://zhangzheyuk.github.com/python/2013/07/25/python_tips_winenv"/>
+   <updated>2013-07-25T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/python/2013/07/25/python_tips_winenv</id>
+   <content type="html">&lt;h4 id='python_win'&gt;Python win下编程的问题&lt;/h4&gt;
+
+&lt;p&gt;在windows下想写个自动的脚本来玩玩，一旦在windows下果然各种各样的问题 纷纷搞出来了。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;首先是最关键的问题，How to run the python scripts,在linux下 根本不会操心这个问题呀，which python,有了直接执行就OK，我先装了 一个2.7的在windows下，然后把路径加到环境变量path里，自从大学学过 java以后好久没改过环境变量了。执行的时候CMD cd到目录下，跟linux 是一样的执行。 需要注意的是windows下cmd，是直接敲D: + enter直接换盘符，好久没 用，我还cd f:试了半天。。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2. 中文编码格式的问题，我代码中注释加了几行中文，结果出来的&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;error SyntaxError:    
+Non-ASCII character &amp;#39;\xc6&amp;#39; in file game.py on    
+line 9, but no encoding declared; 
+see http://www.python.org/peps/pep-0263.html for details  &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;解决办法：# -&lt;em&gt;- coding: UTF-8 -&lt;/em&gt;-指定编码格式。&lt;/p&gt;
+
+&lt;p&gt;然后emacs又出问题了，我save的时候emacs报&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Warning (mule): Invalid coding system &amp;#39;UTF-8&amp;#39; is specified 
+for the current buffer/file by the :coding tag. It is highly 
+recommended to fix it before writing to a file.&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, 改成# -&lt;em&gt;- coding: utf-8 -&lt;/em&gt;- 妈妈再也不用担心我的学习了。。。&lt;/p&gt;
+
+&lt;h4 id='python_xrange_'&gt;Python xrange 问题&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt; xrange
+ 函数说明：用法与range完全相同，所不同的是生成的不是一个数组，而是一个生成器。
+ xrange更适合用作循环里&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id='python_'&gt;Python 逗号的问题&lt;/h4&gt;
+
+&lt;p&gt;在计算海明距离有几行code没有看的特别明白。&lt;/p&gt;
+
+&lt;h4 id='python_'&gt;Python 图像处理相关&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;1. 灰度以及PIL模块里的处理
+[Link](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
+2. 有关图像搜索，相似图形比对
+[阮一峰的Blog](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>linux安全相关</title>
+   <link href="http://zhangzheyuk.github.com/Security/2013/07/11/linux-security"/>
+   <updated>2013-07-11T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/Security/2013/07/11/linux-security</id>
+   <content type="html">&lt;p&gt;Based on &lt;a href='http://linux.chinaitlab.com/safe/826400.html'&gt;this&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id='bios'&gt;BIOS安全&lt;/h4&gt;
+
+&lt;p&gt;设置BIOS密码&lt;/p&gt;
+
+&lt;h4 id='lilo'&gt;LILO安全&lt;/h4&gt;
+
+&lt;p&gt;编辑lilo.conf文件&lt;/p&gt;
+
+&lt;h4 id='id53'&gt;禁用相关帐号&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;删除用户帐号: userdel demo&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;删除群组号: groupdel demo&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id='id54'&gt;选择适当密码&lt;/h4&gt;
+
+&lt;p&gt;/etc/rsyslog.conf&lt;/p&gt;
+
+&lt;p&gt;/etc/login.defs&lt;/p&gt;
+
+&lt;h4 id='suidsgid'&gt;SUID/SGID&lt;/h4&gt;
+
+&lt;p&gt;find / -perm -04000 -type f -ls&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;with suid and sgid, use 6000 to search&lt;/li&gt;
+
+&lt;li&gt;sgid , 2000&lt;/li&gt;
+
+&lt;li&gt;suid , 4000&lt;/li&gt;
+&lt;/ol&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>为博客绑定域名</title>
+   <link href="http://zhangzheyuk.github.com/Personal/2013/06/30/binding-hostname"/>
+   <updated>2013-06-30T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/Personal/2013/06/30/binding-hostname</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;今天想起来突然也没什么要紧的事情，从青哥家里回来之后，想起来Blog一直没有绑定个域名玩一玩，就从jekyll bootstrap 官网找了找方法，貌似也没有什么特别更清楚的介绍,看了看jb 的_config文件里，是比较简单的配置，其实就是在repo里建一个CNAME的文件就行了，去几个卖域名的网站搜了搜，想要的都被人买掉了，于是只能做罢。&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;我是刚开始看到阮一峰的博客里提到Blog like a hack来介绍jekyll的文章才想试一试，顺便练练手对于Git,下面评论里有些人的论调让人感觉很无语，说阮兄这么推广，会引来许多大众的蛀虫之类的东西，然后还提到说sourceforge因为中国大陆很多人占资源又不做贡献之类的。我真想问一问这些所谓的“精英”，哪一个好的互联网产品不希望用的人越多越好，这些人对github藏着掖着生怕别人学会了比他强的心态真是有病，分享是快乐的,提高的，君不见你们这些人为kernel贡献了几行代码，你们用vim，为乌干达的儿童捐过多少钱？你们用stardict,为那个单恋女神的男青年捐过多少钱？这些人压根就是我上文说的心态，生怕好的东西被别人知道了。月光博客也曾在博客里批中国大陆的网民素质低啊，不作为啊，没错，中国大陆的网民素质确实不怎么样，但是现在的免费模式下，人家阻碍你什么了，大家都是公平的用户，人家享受自己免费的服务，跟你有一毛钱关系？这种看法的本质就是骨子里的给人分等级，好像受过一点教育就高人一等，满嘴喊着民主自由，奈何骨子里都是尊卑贵贱，真是可笑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>烟雨江南</title>
+   <link href="http://zhangzheyuk.github.com/Personal/2013/06/28/jiangnan_sanwen"/>
+   <updated>2013-06-28T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/Personal/2013/06/28/jiangnan_sanwen</id>
+   <content type="html">&lt;p&gt;- 烟雨朦胧的小镇,白衣的男子，牵着一匹枣红的瘦马。青石板小道轻轻的脚步，马项上叮咚作响的 铃铛,轻扣着她的心房。推开窗，闪出一条缝，羞涩地撇了一眼，两腮立刻通红，随即关上小窗， 回忆那瞬间眼神里的温柔，一颗心儿扑通扑通地跳。他驻足凝视着窗口，只是因为闪电般的目光交 接与她那一闪而过的娇羞，此时只剩一人一马静静的望着那扇紧闭的小窗……&lt;/p&gt;
+
+&lt;p&gt;- 或许可以想象以后发生的故事，一张梨木雕花的书桌，洁白的宣纸，他右手轻轻的握着她的手, 收笔，然后两人相拥着静静看着纸上的那首小诗，隽秀的字迹“十里平湖霜满天 ,寸寸青丝愁华年。 对月形单望相互 ，只羡鸳鸯不羡仙。”亦或者这一切原本只是个美丽的错误，这一切都发生在少年 的梦里。&lt;/p&gt;
+
+&lt;p&gt;- 常幻想着自己一席长袍，左手边一杯清茗，右手一卷宋词，端坐于竹屋中，看着窗外的细雨抚过那 满山的翠绿。想必在这样一间竹屋中听那深山的夜雨也别有一番风味吧！面对着润洗过的青山，呼 吸着带有淡淡竹香的空气，仿佛真的心若明镜台了。屋前小径上残留着雨后的痕迹，这古诗般的意 境让人禁不住怀疑，哪一汪是新词，哪一渍又是谁留下的韵脚，莫非唐诗宋词已随着空气浸骨入膏？ 这所有的一切都是一个少年的梦，少年总是多梦的，可这梦中的竹屋却总显得那么真实，而我只是 静静的看着，生怕打破了这易碎的梦。&lt;/p&gt;
+
+&lt;p&gt;- 梦中的少年还常与古人手谈论道，黑白之间，方寸天地，论的却是天地之道，“天地不仁，以万物 为刍狗，圣人不仁，以百姓为刍狗”。少年极喜《兰亭集序》，十分欣赏这句话“向之所欣，俯仰之 间，以为陈迹”，此句人阅之顿生白云苍狗之感，少年更爱的是这行云流水般的墨迹，总喜欢幻想自 己徜徉于笔墨之间，墨香混着狼毫笔的淡雅，无酒自醉。这一切显得是那么美，多梦的少年，不想 堕于肮脏势利，于是他只能选择做那棵树，那棵顽固的守护着自己的精神月亮的树。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>jekyll本地调试成功，github没更新</title>
+   <link href="http://zhangzheyuk.github.com/jekyll/2013/06/27/jekyll-update-fail"/>
+   <updated>2013-06-27T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/jekyll/2013/06/27/jekyll-update-fail</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;今天Update了一下blog，访问的时候发现总是没有更新，就觉得非常奇怪，我还以为是github的问题，&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;因为在我本地测试的时候是正常的，但是push上去之后发现网页没有什么变化.查看github page的help,试一&lt;/p&gt;
+
+&lt;p&gt;试加上.nojekyll然后在.gitignore里取消掉_site.不用github来编译。结果发现没有什么用.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;最后偶然试一试旁边同事的电脑，发现他访问果没有问题，我就很疑惑，以为Firefox的缓存问题，结果&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;清理完缓存之后，发现还是不行，下楼找别人访问，结果发现居然跟我一样是错误的结果，我就纳闷了。忽然&lt;/p&gt;
+
+&lt;p&gt;想到可能是我们用的proxy有问题，它把网页放到cache里了，于是我用手机访问，果然没问题。坑爹的代理.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Markdown learning notes</title>
+   <link href="http://zhangzheyuk.github.com/Markdown/2013/06/26/markdown-learning-notes"/>
+   <updated>2013-06-26T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/Markdown/2013/06/26/markdown-learning-notes</id>
+   <content type="html">&lt;h3 id='markdown'&gt;Markdown常用语法&lt;/h3&gt;
+
+&lt;p&gt;Based on &lt;a href='http://www.ituring.com.cn/article/23'&gt;this&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id='_'&gt;- 链接:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;main[words](link)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id='_code_space'&gt;- code引用: 行首空出四个space&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;pubilic class blog(){
+char* owner;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id='_'&gt;- 字体类型:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;*斜体* **粗体**&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;斜体&lt;/em&gt; &lt;strong&gt;粗体&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id='_'&gt;- 段内换行：行尾加两个空格&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;这里打算段内换行+space+space  &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里打算换行&lt;br /&gt;这是下一行的开始&lt;/p&gt;
+
+&lt;h4 id='_'&gt;- 引用&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt;引来一段话&amp;quot;Beauty is our bussiness.&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;Beauty is our bussiness.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id='_'&gt;- 图像的使用&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;![图片](http://img.hb.aicdn.com/c817b7909a0481b5b029b47f88df52cec9e8c2a65b7f-S4JrY8_fw580)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img alt='图片' src='http://img.hb.aicdn.com/c817b7909a0481b5b029b47f88df52cec9e8c2a65b7f-S4JrY8_fw580' /&gt; 还是需要首先上传到图床上去呀，以为跟orgmode一样可以内联。&lt;/p&gt;
+
+&lt;h3 id='category__tags'&gt;关于category 和 tags的设置:&lt;/h3&gt;
+
+&lt;p&gt;1. category: 后面的空格不能省。。。开始我写成了category:sth.死活都不出&lt;/p&gt;
+
+&lt;p&gt;2. tags: 一定要加&lt;span /&gt;,即使是单个tag也必须加。。&lt;/p&gt;
+
+&lt;h3 id='markdown'&gt;在先编辑markdown文件很好的网站&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href='http://mahua.jser.me/'&gt;http://mahua.jser.me/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id='emacsmarkdown_mode'&gt;Emacs下的Markdown mode&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href='http://linuxtoy.org/archives/emacs-markdown-mode.html'&gt;http://linuxtoy.org/archives/emacs-markdown-mode.html&lt;/a&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Build my own blog by jekyll</title>
+   <link href="http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll"/>
+   <updated>2013-03-28T00:00:00+08:00</updated>
+   <id>http://zhangzheyuk.github.com/Personal/2013/03/28/My-blog-based-on-jekyll</id>
+   <content type="html">&lt;p&gt;三月份左右搭起这个Blog,大学毕业的时候玩过一阵wordpress,后来觉得维护起来比较麻烦于是就换到了&lt;a href='http://blog.chinaunix.net/uid/24701781.html'&gt;cu blog&lt;/a&gt;,再后来接触到github之后发现了这个东西，尝试一下~&lt;/p&gt;
+
+&lt;p&gt;有的时候需要一个地方来记录一下想法与思绪，最近有点乱，按老板的话说就是需要停下来理一理思路了，慢慢 把之前Blog上的东西往这里挪吧。这是一个负责而艰巨的工程，毕竟刚开始接触Markdown，慢慢学习吧，路要一步一步走。&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
