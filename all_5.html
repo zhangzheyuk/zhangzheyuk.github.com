@@ -83,7 +83,7 @@
 					<nav id="main-nav">
 						<ul class="main">
 						
-						  <li id=""><a target="self" href="index.html">Home</a></li>
+						  <li id=""><a target="_self" href="index.html">Home</a></li>
 						
 						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
 						
@@ -122,7 +122,7 @@
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
-				<time datetime="2019-07-29T14:54:47+08:00" itemprop="datePublished">2019/7/29</time>
+				<time datetime="2020-11-12T11:14:10+08:00" itemprop="datePublished">2020/11/12</time>
 			</div>
 			<div class="tags">posted in 
 			
@@ -130,42 +130,54 @@
 			 
 			</div>
 		</div>
-		<h1 class="title" itemprop="name"><a href="15643832877933.html" itemprop="url">
-		linux安全TIPS_20130711</a></h1>
+		<h1 class="title" itemprop="name"><a href="16051508505650.html" itemprop="url">
+		思考</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<p>Based on <a href="http://linux.chinaitlab.com/safe/826400.html">this</a></p>
+			<p>DevOps如何实施的基层视角，DevOps实施为啥难？</p>
 
-<h4 id="toc_0">BIOS安全</h4>
+<h2 id="toc_0">什么是DevOps？</h2>
 
-<p>设置BIOS密码</p>
+<p>简单说最初的概念来源软件交付内部，研发人员与运维人员天然的矛盾，研发人员需要持续开发以响应业务需求，但运维人员的核心KPI是稳定性，因此无可避免的矛盾就此产生。如何解决这个问题？共识就是减少人工，通过工具进行标准化的变更，将一个一个业务需求变更类似于生产车间流水线上的商品，标准化的批量交付到用户手中。</p>
 
-<h4 id="toc_1">LILO安全</h4>
+<p>后来DevOps的概念不断泛化，从DevSecOps、DevSevBizOps，眼花缭乱，但无论如何逃不开所谓的关注价值流流动与“三步工作法”：</p>
 
-<p>编辑lilo.conf文件</p>
+<p><img src="media/16051508505650/16125275284428.jpg" alt="" style="width:321px;"/><br/>
+DevOps实施的三个步骤</p>
 
-<h4 id="toc_2">禁用相关帐号</h4>
+<p>第一步是从左到右快速流动<br/>
+第二步是从右到左快速反馈<br/>
+第三步是在整个过程中持续学习。</p>
 
-<ul>
-<li><p>删除用户帐号: userdel demo</p></li>
-<li><p>删除群组号: groupdel demo</p></li>
-</ul>
+<p>本质上就是加快交付以及反馈，持续改进，当然这跟把大象装进冰箱的问题一样，道理我都懂，依旧过不好这一生。</p>
 
-<h4 id="toc_3">选择适当密码</h4>
+<p>无数企业与团队永远卡死在了这第一步，从坐到右快速的流动，小团队的问题从来都是难题，这跟敏捷一样，规模化的协同以及产出的稳定是企业关注的永恒话题。</p>
 
-<p>/etc/rsyslog.conf</p>
+<h2 id="toc_1">什么样的企业需要DevOps？</h2>
 
-<p>/etc/login.defs</p>
+<h2 id="toc_2">关于一站式研发门户建设的必要性</h2>
 
-<h4 id="toc_4">SUID/SGID</h4>
+<p>业内大家一直对各种一站式的工具平台有很多争议的声音，阿里、蚂蚁、腾讯、京东、华为、微软也都有各自的产品，阿里在云效，<br/>
+有一派的论述是这些工具任何一个单点都不如各领域内的“旗舰”产品，整合带来的遍历，蚂蚁甚至喊出了让开发人员体会丝般顺滑的口号，但实际的结果未必尽如人意。那么为什么，在一些企业还是需要进行一站式工具平台的建设？</p>
 
-<p>find / -perm -04000 -type f -ls</p>
+<p>我们从如下几个角度进行分析：</p>
 
 <ol>
-<li>with suid and sgid, use 6000 to search</li>
-<li>sgid , 2000</li>
-<li>suid , 4000</li>
+<li><strong>人员能力</strong>：承认存在精英团队，存在10倍效能工程师，但不能讳言，平庸才是常态，大多数的我们属于“普通人”，甚至在多数金融类企业内部，外包厂商才是开发的绝对主力，人员能力更是参差不齐，因此通过一站式的平台封装掉不必要的要素，帮助开发更集中于自己需要关注的点，进行组织内部开发人员行为的基本规范、质量底线的守护。这当然对于团队中的少数Geek或许感受到一种带锁链跳舞的感觉，但对于技术实力普遍不太强的团队收益较大。</li>
+<li><strong>工具层面</strong>：</li>
 </ol>
+
+<h2 id="toc_3">单一可信数据源</h2>
+
+<h2 id="toc_4">关于协同的设计</h2>
+
+<p>对于大型企业来说，以我曾亲身经历的跨国通信研发企业来说，往往一个产品线就是数百到千开发人员的规模，其文档、流程、交付模式、</p>
+
+<h2 id="toc_5">平台的意义？</h2>
+
+<p>有人说平台的意义是服务，有人说平台的意义在于更加细粒度的数字化管理，平台真正的服务者是谁？</p>
+
+<p>工作的“心流”很重要，如何尽量减少打断也是一门课题</p>
 
 
 			

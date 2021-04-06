@@ -83,7 +83,7 @@
 					<nav id="main-nav">
 						<ul class="main">
 						
-						  <li id=""><a target="self" href="index.html">Home</a></li>
+						  <li id=""><a target="_self" href="index.html">Home</a></li>
 						
 						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
 						
@@ -122,39 +122,34 @@
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
-				<time datetime="2013-07-24T10:39:10+08:00" itemprop="datePublished">2013/7/24</time>
+				<time datetime="2020-01-14T18:50:58+08:00" itemprop="datePublished">2020/1/14</time>
 			</div>
-			<div class="tags">posted in 
 			
-			    <a class='category' href='%E9%9A%8F%E7%AC%94.html'>随笔</a>&nbsp;
 			 
-			</div>
+			
 		</div>
-		<h1 class="title" itemprop="name"><a href="15639359509950.html" itemprop="url">
-		烟雨江南</a></h1>
+		<h1 class="title" itemprop="name"><a href="15789990580162.html" itemprop="url">
+		Jira/Confluence备份恢复遇到的问题</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<ul>
-<li><p>烟雨朦胧的小镇,白衣的男子，牵着一匹枣红的瘦马。青石板小道轻轻的脚步，马项上叮咚作响的<br/>
-铃铛,轻扣着她的心房。推开窗，闪出一条缝，羞涩地撇了一眼，两腮立刻通红，随即关上小窗，<br/>
-回忆那瞬间眼神里的温柔，一颗心儿扑通扑通地跳。他驻足凝视着窗口，只是因为闪电般的目光交<br/>
-接与她那一闪而过的娇羞，此时只剩一人一马静静的望着那扇紧闭的小窗……</p></li>
-<li><p>或许可以想象以后发生的故事，一张梨木雕花的书桌，洁白的宣纸，他右手轻轻的握着她的手,<br/>
-收笔，然后两人相拥着静静看着纸上的那首小诗，隽秀的字迹“十里平湖霜满天 ,寸寸青丝愁华年。<br/>
-对月形单望相互 ，只羡鸳鸯不羡仙。”亦或者这一切原本只是个美丽的错误，这一切都发生在少年<br/>
-的梦里。</p></li>
-<li><p>常幻想着自己一席长袍，左手边一杯清茗，右手一卷宋词，端坐于竹屋中，看着窗外的细雨抚过那<br/>
-满山的翠绿。想必在这样一间竹屋中听那深山的夜雨也别有一番风味吧！面对着润洗过的青山，呼<br/>
-吸着带有淡淡竹香的空气，仿佛真的心若明镜台了。屋前小径上残留着雨后的痕迹，这古诗般的意<br/>
-境让人禁不住怀疑，哪一汪是新词，哪一渍又是谁留下的韵脚，莫非唐诗宋词已随着空气浸骨入膏？<br/>
-这所有的一切都是一个少年的梦，少年总是多梦的，可这梦中的竹屋却总显得那么真实，而我只是<br/>
-静静的看着，生怕打破了这易碎的梦。</p></li>
-<li><p>梦中的少年还常与古人手谈论道，黑白之间，方寸天地，论的却是天地之道，“天地不仁，以万物<br/>
-为刍狗，圣人不仁，以百姓为刍狗”。少年极喜《兰亭集序》，十分欣赏这句话“向之所欣，俯仰之<br/>
-间，以为陈迹”，此句人阅之顿生白云苍狗之感，少年更爱的是这行云流水般的墨迹，总喜欢幻想自<br/>
-己徜徉于笔墨之间，墨香混着狼毫笔的淡雅，无酒自醉。这一切显得是那么美，多梦的少年，不想<br/>
-堕于肮脏势利，于是他只能选择做那棵树，那棵顽固的守护着自己的精神月亮的树。</p></li>
-</ul>
+			<h2 id="toc_0">迁移报错/var/atlassian/application-data/jira目录无权限</h2>
+
+<p>原因：check了用户以及目录权限，最后经过沟通，发现是原home目录下的attchment文件目录曾经配置过软链接，删除掉之后，恢复正常。</p>
+
+<p><a href="https://confluence.atlassian.com/jirakb/how-to-fix-directory-permissions-in-linux-for-jira-server-829048437.html">https://confluence.atlassian.com/jirakb/how-to-fix-directory-permissions-in-linux-for-jira-server-829048437.html</a></p>
+
+<h2 id="toc_1">导入XML的时候报错</h2>
+
+<p>Exception importing entity: java.lang.AbstractMethodError: Method oracle/jdbc/driver/OraclePreparedStatementWrapper.setBinaryStream(ILjava/io/InputStream;)V is abstract</p>
+
+<p>原因JDBC配置到Jira installation directory/jira-atlassian/WEB-INF/lib 里的时候多copy了ojdbc5.jar只拷贝最新版本jar即可</p>
+
+<h2 id="toc_2">导入后需要做的事情</h2>
+
+<ol>
+<li>修改系统配置内的URL link</li>
+<li>重新建立索引</li>
+</ol>
 
 
 			

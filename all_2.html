@@ -83,7 +83,7 @@
 					<nav id="main-nav">
 						<ul class="main">
 						
-						  <li id=""><a target="self" href="index.html">Home</a></li>
+						  <li id=""><a target="_self" href="index.html">Home</a></li>
 						
 						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
 						
@@ -122,68 +122,27 @@
 	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="meta">
 			<div class="date">
-				<time datetime="2019-07-29T14:54:23+08:00" itemprop="datePublished">2019/7/29</time>
+				<time datetime="2021-01-26T10:40:05+08:00" itemprop="datePublished">2021/1/26</time>
 			</div>
 			<div class="tags">posted in 
 			
-			    <a class='category' href='Python.html'>Python</a>&nbsp;
+			    <a class='category' href='%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html'>学习笔记</a>&nbsp;
 			 
 			</div>
 		</div>
-		<h1 class="title" itemprop="name"><a href="15643832637260.html" itemprop="url">
-		python_tips</a></h1>
+		<h1 class="title" itemprop="name"><a href="16116288059221.html" itemprop="url">
+		写作</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<h4 id="toc_0">Python win下编程的问题</h4>
+			<h2 id="toc_0">写作的目的</h2>
 
-<p>在windows下想写个自动的脚本来玩玩，一旦在windows下果然各种各样的问题<br/>
-纷纷搞出来了。</p>
+<h3 id="toc_1">一定有想要表达的观点</h3>
 
-<ol>
-<li><p>首先是最关键的问题，How to run the python scripts,在linux下<br/>
-根本不会操心这个问题呀，which python,有了直接执行就OK，我先装了<br/>
-一个2.7的在windows下，然后把路径加到环境变量path里，自从大学学过<br/>
-java以后好久没改过环境变量了。执行的时候CMD cd到目录下，跟linux<br/>
-是一样的执行。<br/>
-需要注意的是windows下cmd，是直接敲D: + enter直接换盘符，好久没<br/>
-用，我还cd f:试了半天。。  </p></li>
-<li><p>中文编码格式的问题，我代码中注释加了几行中文，结果出来的</p>
-<p>error SyntaxError:<br/><br/>
-Non-ASCII character &#39;\xc6&#39; in file game.py on<br/><br/>
-line 9, but no encoding declared; <br/>
-see <a href="http://www.python.org/peps/pep-0263.html">http://www.python.org/peps/pep-0263.html</a> for details  </p></li>
-</ol>
+<p>正文，这里是正文</p>
 
-<p>解决办法：# -<em>- coding: UTF-8 -</em>-指定编码格式。</p>
+<h3 id="toc_2">写作的技巧</h3>
 
-<p>然后emacs又出问题了，我save的时候emacs报</p>
-
-<pre><code class="language-text">Warning (mule): Invalid coding system &#39;UTF-8&#39; is specified 
-for the current buffer/file by the :coding tag. It is highly 
-recommended to fix it before writing to a file.
-</code></pre>
-
-<p>So, 改成# -<em>- coding: utf-8 -</em>-<br/>
-妈妈再也不用担心我的学习了。。。</p>
-
-<h4 id="toc_1">Python xrange 问题</h4>
-
-<pre><code class="language-text"> xrange
- 函数说明：用法与range完全相同，所不同的是生成的不是一个数组，而是一个生成器。
- xrange更适合用作循环里
-</code></pre>
-
-<h4 id="toc_2">Python 逗号的问题</h4>
-
-<p>在计算海明距离有几行code没有看的特别明白。</p>
-
-<h4 id="toc_3">Python 图像处理相关</h4>
-
-<pre><code class="language-text">1. 灰度以及PIL模块里的处理
-[Link](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
-2. 有关图像搜索，相似图形比对
-[阮一峰的Blog](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)
-</code></pre>
+<p>这里是第二段这个问题</p>
 
 
 			

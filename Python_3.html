@@ -83,7 +83,7 @@
 					<nav id="main-nav">
 						<ul class="main">
 						
-						  <li id=""><a target="self" href="index.html">Home</a></li>
+						  <li id=""><a target="_self" href="index.html">Home</a></li>
 						
 						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
 						
@@ -130,160 +130,60 @@
 			 
 			</div>
 		</div>
-		<h1 class="title" itemprop="name"><a href="15643832637339.html" itemprop="url">
-		python urllib2 intro</a></h1>
+		<h1 class="title" itemprop="name"><a href="15643832637260.html" itemprop="url">
+		python_tips</a></h1>
 		<div class="entry-content" itemprop="articleBody">
 			
-			<div id="content">
-<h1 class="title">python urllib2 intro</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1. ulrlib2</a></li>
-<li><a href="#sec-2">2. Basic use</a></li>
-<li><a href="#sec-3">3. use the urllib to mirror a Request</a></li>
-<li><a href="#sec-4">4. use the urllib to construct a POST request</a></li>
-<li><a href="#sec-5">5. GET request</a></li>
-<li><a href="#sec-6">6. Headers</a></li>
-<li><a href="#sec-7">7. Error handling</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> ulrlib2</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-based on the python manual "how to" part
-</p>
-</div>
-</div>
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Basic use</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-try to get fetch the webpage
-</p>
-<div class="org-src-container">
+			<h4 id="toc_0">Python win下编程的问题</h4>
 
-<pre class="src src-python"><span class="linenr">1: </span><span style="color: #fa8072;">import</span> urllib2 
-<span class="linenr">2: </span><span style="color: #7fffd4; font-weight: bold;">response</span> = urllib2.urlopen(<span style="color: #ffa07a;">"http://python.org/"</span>)
-<span class="linenr">3: </span><span style="color: #7fffd4; font-weight: bold;">html</span> = reponse.read()
-</pre>
-</div></div></div><div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> use the urllib to mirror a Request</h2>
-<div class="outline-text-2" id="text-3">
-<div class="org-src-container">
+<p>在windows下想写个自动的脚本来玩玩，一旦在windows下果然各种各样的问题<br/>
+纷纷搞出来了。</p>
 
-<pre class="src src-python"><span style="color: #fa8072;">import</span> urllib2
+<ol>
+<li><p>首先是最关键的问题，How to run the python scripts,在linux下<br/>
+根本不会操心这个问题呀，which python,有了直接执行就OK，我先装了<br/>
+一个2.7的在windows下，然后把路径加到环境变量path里，自从大学学过<br/>
+java以后好久没改过环境变量了。执行的时候CMD cd到目录下，跟linux<br/>
+是一样的执行。<br/>
+需要注意的是windows下cmd，是直接敲D: + enter直接换盘符，好久没<br/>
+用，我还cd f:试了半天。。  </p></li>
+<li><p>中文编码格式的问题，我代码中注释加了几行中文，结果出来的</p>
+<p>error SyntaxError:<br/><br/>
+Non-ASCII character &#39;\xc6&#39; in file game.py on<br/><br/>
+line 9, but no encoding declared; <br/>
+see <a href="http://www.python.org/peps/pep-0263.html">http://www.python.org/peps/pep-0263.html</a> for details  </p></li>
+</ol>
 
-<span style="color: #7fffd4; font-weight: bold;">req</span> =  urllib2.Request(<span style="color: #ffa07a;">'http://www.voidspace.org.uk'</span>)
-<span style="color: #7fffd4; font-weight: bold;">response</span> = urllib2.urlopen(req)
-<span style="color: #7fffd4; font-weight: bold;">the_page</span> = response.read()
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> use the urllib to construct a POST request</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-(can use this feature to do the auto authetication)
-</p>
+<p>解决办法：# -<em>- coding: UTF-8 -</em>-指定编码格式。</p>
 
-<div class="org-src-container">
+<p>然后emacs又出问题了，我save的时候emacs报</p>
 
-<pre class="src src-python"><span style="color: #fa8072;">import</span> urllib
-<span style="color: #fa8072;">import</span> urllib2
+<pre><code class="language-text">Warning (mule): Invalid coding system &#39;UTF-8&#39; is specified 
+for the current buffer/file by the :coding tag. It is highly 
+recommended to fix it before writing to a file.
+</code></pre>
 
-<span style="color: #7fffd4; font-weight: bold;">url</span> = <span style="color: #ffa07a;">'http://www/someserver.com/cgi-bin/register.cgi'</span>
-<span style="color: #7fffd4; font-weight: bold;">value</span> = {<span style="color: #ffa07a;">'name'</span> : <span style="color: #ffa07a;">'Led Chang'</span>
-<span style="color: #ffa07a;">'location'</span>: <span style="color: #ffa07a;">'QD'</span>
-<span style="color: #ffa07a;">'language'</span>: <span style="color: #ffa07a;">'Python'</span>}
+<p>So, 改成# -<em>- coding: utf-8 -</em>-<br/>
+妈妈再也不用担心我的学习了。。。</p>
 
-<span style="color: #7fffd4; font-weight: bold;">data</span> = urllib.urlencode(values)
-<span style="color: #7fffd4; font-weight: bold;">req</span> = urllib2.Request(url, data)
-<span style="color: #7fffd4; font-weight: bold;">response</span> = urllib2.urlopen(req)
-<span style="color: #7fffd4; font-weight: bold;">the_page</span> = response.read()
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> GET request</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-GET request 明文传输数据
-</p>
-<blockquote>
-<p>
-get and post (转)
-原理介绍：理论上说，GET是从服务器上请求数据，POST是发送数据到服务器。事实上，GET方法是把数据参数队列（query string）加到一个URL上，值和表单是一一对应的。比如说，name=John。在队列里，值和表单用一个&amp;符号分开，空格用+号替换，特 殊的符号转换成十六进制的代码。因为这一队列在URL里边，这样队列的参数就能看得到，可以被记录下来，或更改。通常GET方法还限制字符的大小（大概是 256字节 ）。事实上POST方法可以没有时间限制的传递数据到服务器，用户在浏览器端是看不到这一过程的，所以POST方法比较适合用于发送一个保密的（比如信用 卡号）或者比较大量的数据到服务器。
-GET是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到
-POST是通过HTTP POST机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。
-对于GET方式，服务器端用Request.QueryString获取变量的值，
-对于POST方式，服务器端用Request.Form获取提交的数据。
-</p>
+<h4 id="toc_1">Python xrange 问题</h4>
 
-<p>
-区别：
-Post是允许传输大量数据的方法，而Get方法会将所要传输的数据附在网址后面，然后一起送达服务器，因此传送的数据量就会受到限制，但是执行效率却比Post方法好。 
-</p>
-<p>
-建议：
-1、get方式的安全性较Post方式要差些，包含机密信息的话，建议用Post数据提交方式；
-2、在做数据查询时，建议用Get方式；而在做数据添加、修改或删除时，建议用Post方式；
-</p>
-</blockquote>
-<div class="org-src-container">
+<pre><code class="language-text"> xrange
+ 函数说明：用法与range完全相同，所不同的是生成的不是一个数组，而是一个生成器。
+ xrange更适合用作循环里
+</code></pre>
 
-<pre class="src src-python">&gt;&gt;&gt; <span style="color: #fa8072;">import</span> urllib
-&gt;&gt;&gt; data={}
-&gt;&gt;&gt; data[<span style="color: #ffa07a;">'name'</span>] = <span style="color: #ffa07a;">'Somebody Here'</span>
-&gt;&gt;&gt; data[<span style="color: #ffa07a;">'location'</span>] = <span style="color: #ffa07a;">'Northampton'</span>
-&gt;&gt;&gt; data[<span style="color: #ffa07a;">'language'</span>] = <span style="color: #ffa07a;">'Python'</span>
-&gt;&gt;&gt; url_values = urllib.urlencode(data)
-&gt;&gt;&gt; <span style="color: #fa8072;">print</span> url_values
-<span style="color: #7fffd4; font-weight: bold;">name</span>=Somebody+Here&amp;language=Python&amp;location=Northampton
-&gt;&gt;&gt; url = <span style="color: #ffa07a;">'http://www.example.com/example.cgi'</span>
-&gt;&gt;&gt; full_url = url + <span style="color: #ffa07a;">'?'</span> + url_values
-&gt;&gt;&gt; data = urllib2.urlopen(full_url)
-</pre>
-</div>
-</div></div><div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Headers</h2>
-<div class="outline-text-2" id="text-6"><p>
-<p>add headers to the HTTP request<br/>
-contains about the version of the OS and web browser</p>
-</p>
-<div class="org-src-container">
+<h4 id="toc_2">Python 逗号的问题</h4>
 
-<pre class="src src-python"><span style="color: #fa8072;">import</span> urllib
-<span style="color: #fa8072;">import</span> urllib2
+<p>在计算海明距离有几行code没有看的特别明白。</p>
 
-<span style="color: #7fffd4; font-weight: bold;">url</span> = <span style="color: #ffa07a;">'http://www.someserver.com/cgi-bin/register.cgi'</span>
-<span style="color: #7fffd4; font-weight: bold;">user_agent</span> = <span style="color: #ffa07a;">'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'</span>
-<span style="color: #7fffd4; font-weight: bold;">values</span> = {<span style="color: #ffa07a;">'name'</span> : <span style="color: #ffa07a;">'Michael Foord'</span>,
-<span style="color: #ffa07a;">'location'</span> : <span style="color: #ffa07a;">'Northampton'</span>,
-<span style="color: #ffa07a;">'language'</span> : <span style="color: #ffa07a;">'Python'</span> }
-<span style="color: #7fffd4; font-weight: bold;">headers</span> = { <span style="color: #ffa07a;">'User-Agent'</span> : user_agent }
+<h4 id="toc_3">Python 图像处理相关</h4>
 
-<span style="color: #7fffd4; font-weight: bold;">data</span> = urllib.urlencode(values)
-<span style="color: #7fffd4; font-weight: bold;">req</span> = urllib2.Request(url, data, headers)
-<span style="color: #7fffd4; font-weight: bold;">response</span> = urllib2.urlopen(req)
-<span style="color: #7fffd4; font-weight: bold;">the_page</span> = response.read()
-</pre>
-</div>
-</div></div>
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Error handling</h2>
-</div>
-</div><div id="postamble" class="status">
-<p class="author">Author: zhang led</p>
-<p class="date">Created: 2013-08-15 Thu 13:39</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 23.4.1 (<a href="http://orgmode.org">Org</a> mode 8.0.7)</p>
-<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
-</div>
+<pre><code class="language-text">1. 灰度以及PIL模块里的处理
+[Link](http://qinxuye.me/article/implement-sketch-and-pencil-with-pil/)
+2. 有关图像搜索，相似图形比对
+[阮一峰的Blog](http://www.ruanyifeng.com/blog/2011/07/principle_of_similar_image_search.html)
+</code></pre>
 
 
 			
